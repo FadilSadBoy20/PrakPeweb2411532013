@@ -1,0 +1,65 @@
+body { padding-top: 70px; }
+
+.hero-section h1 { text-shadow: 0 4px 18px rgba(0,0,0,0.45); }
+
+.feature-card { transition: transform .25s ease, box-shadow .25s ease; }
+.feature-card:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+
+.laprak-card { transition: transform .25s ease, box-shadow .25s ease; }
+.laprak-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.16); }
+
+.laprak-report section { margin-bottom: 1.5rem; }
+.laprak-report h6 { font-weight: 700; margin-bottom: .75rem; }
+.laprak-report p { line-height: 1.7; }
+.laprak-report pre {
+    background: #1f2933;
+    color: #f8f9fa;
+    border-radius: .5rem;
+    padding: .85rem 1rem;
+    white-space: pre-wrap;
+}
+.laprak-figure {
+    margin: 1rem 0 1.25rem;
+}
+.laprak-figure img {
+    border: 1px solid #dee2e6;
+    border-radius: .5rem;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+.laprak-figure figcaption {
+    color: #6c757d;
+    font-size: .875rem;
+    margin-top: .5rem;
+    text-align: center;
+}
+
+.card-img-top { object-fit: cover; height: 200px; }
+
+button[disabled] { opacity: 0.7; cursor: not-allowed; }
+
+@media (max-width: 767px) {
+  .hero-section { padding: 3rem 1rem; }
+}
+
+body {
+    background-image: url('images/bluehourbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-indicators button {
+    background-color: gray;      
+    border-color: gray;          
+}
+
+
+.carousel-indicators .active {
+    background-color: darkgray;  
+}
+
+.about-section * {
+    color: #fff !important;
+}

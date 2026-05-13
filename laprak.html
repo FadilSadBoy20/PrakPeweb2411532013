@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laprak - Fadil</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logowebsitetr.png">
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="images/logowebsitetr.png" alt="Logo" class="me-2" style="height: 28px;">
+        <span>Fadil Web<span class="text-primary">.</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain5" aria-controls="navMain5" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain5">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="laprak.html">Laprak</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mt-5 pt-5">
+    <section class="py-5">
+      <div class="container p-4 rounded text-light" style="background: rgba(0,0,0,0.62);">
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-4">
+          <div>
+            <h2 class="h4 mb-1">Laporan Praktikum</h2>
+            <p class="text-white-50 small mb-0">Kumpulan laporan praktikum berdasarkan mata kuliah.</p>
+          </div>
+
+          <div class="btn-group flex-wrap" role="group" aria-label="Filter laporan praktikum">
+            <button type="button" class="btn btn-outline-light btn-sm laprak-filter active" data-filter="all">All</button>
+            <button type="button" class="btn btn-outline-light btn-sm laprak-filter" data-filter="Pemrograman Web">Pemrograman Web</button>
+          </div>
+        </div>
+
+        <div class="row g-4" id="laprakGrid">
+          <div class="col-md-6 col-lg-4 laprak-item" data-course="Pemrograman Web">
+            <div class="card h-100 laprak-card border-0 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-primary align-self-start mb-3">Pemrograman Web</span>
+                <h5 class="card-title">Pengenalan Framework Laravel</h5>
+                <p class="card-text small text-muted">Laporan praktikum instalasi kebutuhan sistem, pembuatan project Laravel, routing, controller, view, dan konsep MVC.</p>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#laprakModal">Baca Laporan</button>
+                  <a class="btn btn-sm btn-outline-dark" href="https://github.com/FadilSadBoy20/PrakPeweb2411532013" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github me-1"></i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="laprakModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title">Pengenalan Framework Laravel</h5>
+            <p class="small text-muted mb-0">Pertemuan 7</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="badge text-bg-primary mb-3">Pemrograman Web</span>
+
+          <article class="laprak-report">
+            <section>
+              <h6>1. Pendahuluan</h6>
+              <p>
+                Laravel adalah salah satu framework PHP yang sering digunakan dalam pembuatan aplikasi web.
+                Framework ini menggunakan konsep arsitektur MVC atau Model-View-Controller, sehingga proses
+                pengembangan aplikasi dapat dilakukan dengan lebih teratur, rapi, dan mudah untuk dikelola.
+              </p>
+              <p>
+                Pada praktikum ini, mahasiswa dikenalkan dengan Laravel mulai dari pemahaman dasar tentang
+                framework Laravel, perangkat lunak yang dibutuhkan, struktur dasar project Laravel, sampai
+                dengan konsep MVC yang menjadi dasar utama dalam pengembangan aplikasi Laravel. Praktikum ini
+                menjadi tahap awal sebelum mahasiswa mengembangkan aplikasi web yang lebih kompleks menggunakan
+                framework Laravel.
+              </p>
+            </section>
+
+            <section>
+              <h6>2. Tujuan</h6>
+              <ul>
+                <li>Mahasiswa dapat memahami dasar-dasar framework Laravel sebagai framework PHP yang digunakan untuk membangun aplikasi web.</li>
+                <li>Mahasiswa dapat mengetahui tools dan kebutuhan awal yang diperlukan dalam pembuatan project Laravel.</li>
+                <li>Mahasiswa dapat mengenal struktur dasar Laravel serta memahami konsep MVC, yaitu Model, View, dan Controller.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h6>3. Alat atau Tools yang Dipakai</h6>
+              <ul>
+                <li>Laragon atau XAMPP</li>
+                <li>Visual Studio Code</li>
+                <li>Composer</li>
+                <li>Git</li>
+                <li>Node JS</li>
+                <li>NPM</li>
+                <li>GitHub</li>
+              </ul>
+            </section>
+
+            <section>
+              <h6>4. Langkah Pengerjaan</h6>
+              <p>
+                Pada bagian ini dilakukan persiapan dan pengaturan awal Laravel sesuai dengan modul praktikum.
+                Tahapan pengerjaan dimulai dari mengecek kebutuhan sistem, membuat project Laravel, menjalankan
+                project, hingga memahami struktur dasar Laravel serta konsep MVC.
+              </p>
+            </section>
+
+            <section>
+              <h6>4.1 Mengecek Kebutuhan Sistem Laravel</h6>
+              <p>
+                Sebelum membuat project Laravel, langkah pertama yang dilakukan adalah mengecek beberapa tools
+                yang diperlukan. Laravel membutuhkan PHP, Composer, Git, Node JS, dan NPM agar proses pembuatan
+                serta pengembangan project dapat berjalan dengan baik.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-06 111126.png" alt="Pengecekan versi PHP, Composer, Git, Node JS, dan NPM">
+                <figcaption>Gambar 1. Pengecekan versi PHP, Composer, Git, Node JS, dan NPM.</figcaption>
+              </figure>
+              <p>
+                Setelah perintah dijalankan, terminal akan menampilkan versi dari masing-masing tools. Apabila
+                semua tools sudah menampilkan versinya, maka tools tersebut sudah terpasang dengan benar dan
+                siap digunakan.
+              </p>
+            </section>
+
+            <section>
+              <h6>4.2 Membuat Project Laravel</h6>
+              <p>
+                Setelah seluruh kebutuhan sistem terpenuhi, langkah berikutnya adalah membuat project Laravel.
+                Pada praktikum ini, project Laravel dibuat menggunakan Composer atau Laravel installer.
+              </p>
+              <p class="mb-2">Perintah yang digunakan adalah:</p>
+              <pre><code>composer create-project laravel/laravel=^12 PrakWeb1 --prefer-dist</code></pre>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 231145.png" alt="Proses pembuatan project Laravel menggunakan Composer">
+                <figcaption>Gambar 2. Proses pembuatan project Laravel menggunakan Composer.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 231231.png" alt="Project Laravel berhasil dibuat dan dependency selesai dipasang">
+                <figcaption>Gambar 3. Project Laravel berhasil dibuat dan dependency selesai dipasang.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.3 Masuk ke Folder Project</h6>
+              <p>
+                Setelah project berhasil dibuat, langkah selanjutnya adalah masuk ke folder project dengan
+                menggunakan perintah berikut:
+              </p>
+              <pre><code>cd PrakWeb1</code></pre>
+            </section>
+
+            <section>
+              <h6>4.4 Menjalankan Project Laravel</h6>
+              <p>
+                Untuk menjalankan project Laravel, digunakan perintah Artisan. Setelah perintah dijalankan,
+                Laravel akan menjalankan server lokal. Biasanya aplikasi dapat dibuka melalui browser dengan
+                alamat yang tersedia. Jika berhasil, halaman awal Laravel akan muncul pada browser.
+              </p>
+              <pre><code>php artisan serve</code></pre>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 231650.png" alt="Halaman awal Laravel berhasil tampil di browser">
+                <figcaption>Gambar 4. Halaman awal Laravel berhasil tampil di browser.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.5 Menampilkan Halaman Hello World</h6>
+              <p>
+                Setelah project Laravel berhasil dijalankan, langkah berikutnya adalah mencoba membuat halaman
+                sederhana. Tujuan dari langkah ini adalah memastikan bahwa routing dan tampilan pada Laravel
+                sudah dapat berjalan dengan baik.
+              </p>
+              <p class="mb-2">Route sederhana dibuat pada file <strong>routes/web.php</strong> seperti berikut:</p>
+              <pre><code>Route::get('/hello', function () {
+    return 'Hello World';
+});</code></pre>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 231913.png" alt="Penambahan route hello pada file web.php">
+                <figcaption>Gambar 5. Penambahan route /hello pada file web.php.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 232011.png" alt="Tampilan Hello World pada browser">
+                <figcaption>Gambar 6. Tampilan Hello World pada browser.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.6 Challenge</h6>
+              <p>Pada bagian challenge, mahasiswa diminta membuat route, controller, dan view sederhana.</p>
+              <ul>
+                <li>Membuat controller dengan nama <strong>UserController</strong>.</li>
+                <li>Di dalam controller membuat function dengan nama <strong>index</strong>.</li>
+                <li>Membuat view di dalam folder <strong>resources/views/user/index.blade.php</strong>.</li>
+                <li>Pada file index, membuat tampilan HTML sederhana.</li>
+                <li>Membuat routing <strong>/user</strong> untuk menampilkan view tersebut.</li>
+              </ul>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 234104.png" alt="Pembuatan UserController dan function index">
+                <figcaption>Gambar 7. Pembuatan UserController dan function index.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 235136.png" alt="Pembuatan file view index.blade.php">
+                <figcaption>Gambar 8. Pembuatan file view index.blade.php.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 235324.png" alt="Penambahan route user pada file web.php">
+                <figcaption>Gambar 9. Penambahan route /user pada file web.php.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 235031.png" alt="Tampilan halaman user pada browser">
+                <figcaption>Gambar 10. Tampilan halaman user pada browser.</figcaption>
+              </figure>
+            </section>
+          </article>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light pt-5">
+    <div class="container pb-4 border-bottom border-secondary">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Tentang</h6>
+          <p class="small text-white-50 mb-0">
+            Fadil Web adalah layanan pembuatan website, aplikasi, dan solusi digital.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1"><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+            <li class="mb-1"><a href="about.html" class="text-decoration-none text-light">About</a></li>
+            <li class="mb-1"><a href="portfolio.html" class="text-decoration-none text-light">Portfolio</a></li>
+            <li class="mb-1"><a href="laprak.html" class="text-decoration-none text-light">Laprak</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center text-md-start">
+          <h6 class="fw-bold mb-3">Follow Me</h6>
+          <a href="https://wa.me/6282311488810" target="_blank" class="text-light fs-4 me-2 text-decoration-none">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="https://facebook.com/profile.php?id=100040110443069" target="_blank" class="text-light fs-4 me-2 text-decoration-none">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/fadilasril_20" target="_blank" class="text-light fs-4 text-decoration-none">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3">
+      <p class="small mb-0">&copy; 2025 | Fadil Insanus Siddik</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.laprak-filter').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.laprak-filter').forEach(item => item.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.laprak-item').forEach(item => {
+          if (filter === 'all' || item.dataset.course === filter) {
+            item.classList.remove('d-none');
+          } else {
+            item.classList.add('d-none');
+          }
+        });
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
