@@ -63,6 +63,22 @@
               </div>
             </div>
           </div>
+
+          <div class="col-md-6 col-lg-4 laprak-item" data-course="Pemrograman Web">
+            <div class="card h-100 laprak-card border-0 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-primary align-self-start mb-3">Pemrograman Web</span>
+                <h5 class="card-title">Migration, Seeding, Routing, Model, Controller, View</h5>
+                <p class="card-text small text-muted">Laporan praktikum pembuatan struktur database, pengisian data awal, routing, model, controller, dan tampilan aplikasi Laravel.</p>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#laprakModalMigration">Baca Laporan</button>
+                  <a class="btn btn-sm btn-outline-dark" href="https://github.com/FadilSadBoy20/PraktikumPeweb" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github me-1"></i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -234,6 +250,426 @@
               <figure class="laprak-figure">
                 <img src="images/Screenshot 2026-05-11 235031.png" alt="Tampilan halaman user pada browser">
                 <figcaption>Gambar 10. Tampilan halaman user pada browser.</figcaption>
+              </figure>
+            </section>
+          </article>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="laprakModalMigration" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title">Migration, Seeding, Routing, Model, Controller, View</h5>
+            <p class="small text-muted mb-0">Praktikum Laravel</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="badge text-bg-primary mb-3">Pemrograman Web</span>
+
+          <article class="laprak-report">
+            <section>
+              <h6>1. Pendahuluan</h6>
+              <p>
+                Perkembangan teknologi saat ini membuat aplikasi web semakin banyak digunakan dalam berbagai
+                bidang. Untuk membuat aplikasi web yang baik dan terstruktur, diperlukan framework yang dapat
+                membantu proses pengembangan menjadi lebih mudah, efisien, dan rapi. Salah satu framework PHP
+                yang banyak digunakan adalah Laravel. Laravel menyediakan banyak fitur untuk membantu pembuatan
+                aplikasi web, mulai dari pengelolaan database, pengaturan tampilan, sampai pengelolaan alur
+                program menggunakan konsep MVC atau Model View Controller.
+              </p>
+              <p>
+                Pada praktikum ini dipelajari beberapa materi dasar dalam penggunaan Laravel, yaitu migration,
+                seeding, routing, model, controller, dan view. Migration digunakan untuk membuat dan mengatur
+                struktur database menggunakan kode program, sedangkan seeding digunakan untuk mengisi data awal
+                ke dalam database. Routing digunakan untuk mengatur URL aplikasi, model digunakan untuk
+                berhubungan dengan database, controller digunakan untuk mengatur logika program, dan view
+                digunakan untuk menampilkan halaman antarmuka kepada pengguna menggunakan Blade Template.
+              </p>
+            </section>
+
+            <section>
+              <h6>2. Tujuan Praktikum</h6>
+              <p>
+                Praktikum ini bertujuan untuk memberikan pemahaman dan keterampilan dasar kepada mahasiswa dalam
+                membangun aplikasi web modern berbasis framework PHP dengan menerapkan konsep MVC. Mahasiswa
+                diharapkan mampu memahami struktur dan alur kerja Laravel sebagai salah satu framework yang
+                banyak digunakan dalam pengembangan aplikasi web.
+              </p>
+              <p>
+                Selain itu, praktikum ini bertujuan melatih kemampuan mahasiswa dalam mengelola database
+                menggunakan migration dan seeding, membuat serta mengatur routing aplikasi, membangun model
+                untuk interaksi data, membuat tampilan antarmuka menggunakan Blade Template, serta mengembangkan
+                controller sebagai penghubung antara model dan view. Dengan mempelajari materi tersebut,
+                mahasiswa diharapkan mampu memahami proses pengembangan aplikasi secara terstruktur, efisien,
+                dan mudah dipelihara.
+              </p>
+            </section>
+
+            <section>
+              <h6>3. Alat dan Bahan</h6>
+              <ul>
+                <li>Komputer atau laptop</li>
+                <li>XAMPP</li>
+                <li>Visual Studio Code</li>
+                <li>Composer</li>
+                <li>Git</li>
+                <li>Node JS</li>
+                <li>NPM</li>
+              </ul>
+            </section>
+
+            <section>
+              <h6>4. Langkah Praktikum</h6>
+              <p>
+                Langkah praktikum dimulai dari konfigurasi database, pembuatan migration, pengisian data awal
+                menggunakan seeder, pengaturan routing, pembuatan model, pembuatan controller, hingga pembuatan
+                tampilan menggunakan Blade. Setiap tahap saling berhubungan sehingga aplikasi Laravel dapat
+                mengambil data dari database dan menampilkannya pada halaman web.
+              </p>
+            </section>
+
+            <section>
+              <h6>4.1 Konfigurasi Database</h6>
+              <p>
+                Langkah pertama adalah membuka file <strong>.env</strong>, kemudian menyesuaikan konfigurasi
+                koneksi database. Database menggunakan MySQL dengan host <strong>127.0.0.1</strong>, port
+                <strong>3306</strong>, username <strong>root</strong>, dan nama database
+                <strong>praktikum_laravel</strong>. Setelah itu, database baru dibuat melalui phpMyAdmin agar
+                Laravel memiliki tempat untuk menyimpan tabel dan data aplikasi.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-01.jpeg" alt="Konfigurasi database praktikum_laravel pada file .env">
+                <figcaption>Gambar 1. Konfigurasi koneksi database Laravel.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-02.jpeg" alt="Pembuatan database praktikum_laravel di phpMyAdmin">
+                <figcaption>Gambar 2. Pembuatan database baru melalui phpMyAdmin.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.2 Migration</h6>
+              <p>
+                Migration digunakan untuk membuat struktur tabel database melalui kode program. Pada praktikum
+                ini dibuat migration untuk tabel <strong>products</strong> menggunakan perintah:
+              </p>
+              <pre><code>php artisan make:migration create_products_table</code></pre>
+              <p>
+                Setelah file migration berhasil dibuat, file tersebut dibuka pada folder
+                <strong>database/migrations</strong>. Pada method <strong>up()</strong>, dibuat tabel
+                <strong>products</strong> dengan beberapa kolom, yaitu <strong>id</strong> sebagai primary key,
+                <strong>name</strong> untuk menyimpan nama produk, <strong>price</strong> untuk menyimpan harga,
+                <strong>description</strong> untuk menyimpan deskripsi produk, serta
+                <strong>timestamps()</strong> untuk membuat kolom <strong>created_at</strong> dan
+                <strong>updated_at</strong> secara otomatis.
+              </p>
+              <p>
+                Pada method <strong>down()</strong>, terdapat perintah untuk menghapus tabel
+                <strong>products</strong> apabila migration dibatalkan atau dilakukan rollback. Setelah struktur
+                migration selesai dibuat, perintah <strong>php artisan migrate</strong> dijalankan agar tabel
+                dibuat di database. Jika berhasil, tabel <strong>products</strong> akan muncul pada database
+                bersama tabel bawaan Laravel lainnya.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-03.jpeg" alt="Perintah membuat migration create_products_table">
+                <figcaption>Gambar 3. Pembuatan file migration create_products_table.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-04.jpeg" alt="Kode migration untuk tabel products">
+                <figcaption>Gambar 4. Struktur tabel products pada file migration.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-05.jpeg" alt="Menjalankan perintah php artisan migrate">
+                <figcaption>Gambar 5. Proses menjalankan migration.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-06.jpeg" alt="Tabel products berhasil muncul di database">
+                <figcaption>Gambar 6. Tabel products berhasil dibuat di database.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.3 Seeding</h6>
+              <p>
+                Seeding digunakan untuk memasukkan data awal ke dalam database secara otomatis. Pada praktikum
+                ini dibuat file seeder bernama <strong>ProductSeeder</strong> menggunakan perintah:
+              </p>
+              <pre><code>php artisan make:seeder ProductSeeder</code></pre>
+              <p>
+                Di dalam method <strong>run()</strong>, data produk dimasukkan ke tabel
+                <strong>products</strong> menggunakan perintah insert. Data awal yang digunakan adalah contoh
+                produk seperti Laptop dan Mouse, lengkap dengan harga dan deskripsi. Kolom
+                <strong>created_at</strong> dan <strong>updated_at</strong> diisi menggunakan fungsi
+                <strong>now()</strong> agar waktu pembuatan dan pembaruan data tercatat otomatis.
+              </p>
+              <p>
+                Setelah file seeder dibuat, pemanggilan <strong>ProductSeeder</strong> ditambahkan pada file
+                <strong>DatabaseSeeder.php</strong>. Selanjutnya perintah <strong>php artisan db:seed</strong>
+                dijalankan di terminal agar data awal masuk ke database. Seeder berguna untuk membuat data awal
+                atau data dummy sehingga proses pengujian aplikasi dapat dilakukan tanpa memasukkan data secara
+                manual satu per satu.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-07.jpeg" alt="Perintah membuat ProductSeeder">
+                <figcaption>Gambar 7. Pembuatan file ProductSeeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-08.jpeg" alt="Kode ProductSeeder untuk mengisi data products">
+                <figcaption>Gambar 8. Pengisian data awal produk pada seeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-09.jpeg" alt="Memanggil ProductSeeder pada DatabaseSeeder">
+                <figcaption>Gambar 9. Pemanggilan ProductSeeder pada DatabaseSeeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-10.jpeg" alt="Menjalankan perintah php artisan db:seed">
+                <figcaption>Gambar 10. Proses menjalankan seeder.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.4 Routing</h6>
+              <p>
+                Routing berfungsi untuk mengatur alamat URL yang dapat diakses oleh pengguna. Pada Laravel,
+                routing umumnya ditulis pada file <strong>routes/web.php</strong>. Pada praktikum ini dipelajari
+                beberapa jenis routing, yaitu routing dasar, routing parameter, named route, dan route group.
+              </p>
+              <p>
+                Routing dasar digunakan untuk menampilkan respon sederhana ketika URL tertentu diakses. Routing
+                parameter digunakan untuk menerima nilai dari URL, misalnya ID produk. Named route digunakan
+                untuk memberikan nama pada route agar lebih mudah dipanggil kembali. Sementara itu, route group
+                digunakan untuk mengelompokkan beberapa route yang memiliki prefix atau awalan URL yang sama,
+                seperti halaman admin.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-11.jpeg" alt="Contoh routing dasar pada Laravel">
+                <figcaption>Gambar 11. Contoh routing dasar pada Laravel.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-12.jpeg" alt="Contoh routing parameter pada Laravel">
+                <figcaption>Gambar 12. Contoh routing parameter pada Laravel.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-13.jpeg" alt="Contoh named route pada Laravel">
+                <figcaption>Gambar 13. Contoh named route pada Laravel.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-14.jpeg" alt="Contoh route group pada Laravel">
+                <figcaption>Gambar 14. Contoh route group pada Laravel.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.5 Model</h6>
+              <p>
+                Model digunakan untuk berinteraksi dengan tabel pada database. Pada praktikum ini dibuat model
+                <strong>Product</strong> yang berada pada direktori <strong>app/Models</strong>. Model tersebut
+                mewakili tabel <strong>products</strong> dan memungkinkan aplikasi melakukan operasi database
+                seperti mengambil, menambah, mengubah, dan menghapus data.
+              </p>
+              <p>
+                Pada class <strong>Product</strong>, digunakan trait <strong>HasFactory</strong> dan property
+                <strong>$fillable</strong>. Property <strong>$fillable</strong> berisi daftar kolom yang boleh
+                diisi secara massal, yaitu <strong>name</strong>, <strong>price</strong>, dan
+                <strong>description</strong>. Dengan pengaturan ini, Laravel dapat menjaga keamanan data agar
+                hanya field tertentu yang dapat diproses saat melakukan input data.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-15.jpeg" alt="Struktur folder model Product.php">
+                <figcaption>Gambar 15. Pembuatan model Product.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-16.jpeg" alt="Kode model Product dengan property fillable">
+                <figcaption>Gambar 16. Pengaturan fillable pada model Product.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.6 Controller</h6>
+              <p>
+                Controller digunakan untuk mengatur logika aplikasi dan menjadi penghubung antara model dengan
+                view. Pada praktikum ini dibuat controller bernama <strong>ProductController</strong> menggunakan
+                perintah:
+              </p>
+              <pre><code>php artisan make:controller ProductController</code></pre>
+              <p>
+                Di dalam controller dibuat method <strong>index()</strong>. Method ini mengambil seluruh data
+                produk dari database menggunakan model <strong>Product</strong>, kemudian mengirimkan data
+                tersebut ke halaman view bernama <strong>products</strong>. Dengan cara ini, controller berperan
+                sebagai pusat pengatur alur data dari database menuju halaman web.
+              </p>
+              <p>
+                Route kemudian dihubungkan ke controller agar ketika URL tertentu diakses, method
+                <strong>index()</strong> pada <strong>ProductController</strong> dijalankan. Selain route biasa,
+                juga dipelajari penggunaan <strong>Route::resource</strong> yang dapat memetakan fungsi CRUD
+                secara otomatis ke controller.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-17.jpeg" alt="Perintah membuat ProductController">
+                <figcaption>Gambar 17. Pembuatan controller ProductController.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-18.jpeg" alt="Method index pada ProductController">
+                <figcaption>Gambar 18. Method index untuk mengambil data produk.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-19.jpeg" alt="Route menuju ProductController">
+                <figcaption>Gambar 19. Menghubungkan route ke controller.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-20.jpeg" alt="Controller yang mengambil data products melalui model Product">
+                <figcaption>Gambar 20. Controller dengan model Product.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-21.jpeg" alt="Penggunaan resource route pada products">
+                <figcaption>Gambar 21. Penggunaan resource route pada Laravel.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.7 View dan Blade Layout</h6>
+              <p>
+                View digunakan untuk menampilkan data kepada pengguna. Laravel menggunakan Blade Template untuk
+                membuat tampilan yang lebih rapi dan mudah digunakan kembali. Pada praktikum ini dibuat file
+                layout utama pada <strong>resources/views/layouts/app.blade.php</strong>. Layout tersebut berisi
+                struktur dasar HTML, bagian judul halaman, serta area konten yang dapat diisi oleh halaman lain.
+              </p>
+              <p>
+                Selanjutnya dibuat file view <strong>products.blade.php</strong> yang menggunakan layout utama
+                tersebut. File ini mengatur judul halaman dengan directive <strong>@section('title')</strong>,
+                kemudian menampilkan daftar produk menggunakan perulangan <strong>@foreach</strong>. Data produk
+                yang dikirim dari controller ditampilkan dalam bentuk daftar sehingga pengguna dapat melihat nama,
+                harga, dan deskripsi produk pada halaman web.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-22.jpeg" alt="Kode layout utama app.blade.php">
+                <figcaption>Gambar 22. Pembuatan layout utama Blade.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-23.jpeg" alt="Kode view products.blade.php yang menggunakan layout Blade">
+                <figcaption>Gambar 23. View products yang menggunakan layout Blade.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>5. Tugas</h6>
+              <p>
+                Pada bagian tugas, dibuat aplikasi sederhana untuk mengelola data mahasiswa. Database baru dibuat
+                dengan nama <strong>db_mahasiswa</strong>, kemudian konfigurasi database pada file
+                <strong>.env</strong> disesuaikan agar Laravel terhubung ke database tersebut.
+              </p>
+              <p>
+                Setelah koneksi database diatur, dibuat model <strong>Mahasiswa</strong> pada direktori
+                <strong>app/Models</strong>. Model ini memiliki property <strong>$fillable</strong> untuk
+                mengizinkan penyimpanan data pada kolom <strong>nim</strong>, <strong>nama</strong>, dan
+                <strong>jurusan</strong>. Selanjutnya dibuat migration untuk tabel <strong>mahasiswas</strong>
+                dengan kolom <strong>id</strong>, <strong>nim</strong>, <strong>nama</strong>,
+                <strong>jurusan</strong>, serta <strong>timestamps</strong>.
+              </p>
+              <p>
+                Setelah migration selesai disusun, perintah <strong>php artisan migrate</strong> dijalankan untuk
+                membuat tabel pada database. Berikutnya dibuat <strong>MahasiswaSeeder</strong> untuk mengisi
+                data awal mahasiswa, lalu seeder tersebut dipanggil melalui <strong>DatabaseSeeder.php</strong>
+                dan dijalankan menggunakan perintah <strong>php artisan migrate --seed</strong>.
+              </p>
+              <p>
+                Untuk mengatur alur aplikasi, file <strong>web.php</strong> ditambahkan route resource yang
+                mengarah ke <strong>MahasiswaController</strong>. Controller tersebut berisi method untuk
+                menampilkan data, menyimpan data baru, mengubah data, dan menghapus data. Selanjutnya dibuat
+                tampilan pada folder <strong>resources/views/mahasiswa</strong>, yaitu halaman
+                <strong>index.blade.php</strong> untuk menampilkan daftar mahasiswa,
+                <strong>create.blade.php</strong> untuk menambah data, dan <strong>edit.blade.php</strong> untuk
+                mengubah data.
+              </p>
+              <p>
+                Hasil akhir dari tugas ini adalah halaman daftar mahasiswa yang menampilkan data dalam bentuk
+                tabel. Pengguna dapat menambah data mahasiswa baru, mengedit data yang sudah ada, dan menghapus
+                data dengan konfirmasi terlebih dahulu. Dengan tugas ini, konsep migration, seeding, routing,
+                model, controller, dan view diterapkan secara lengkap dalam bentuk aplikasi CRUD sederhana.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-24.jpeg" alt="Pembuatan database db_mahasiswa di phpMyAdmin">
+                <figcaption>Gambar 24. Pembuatan database db_mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-25.jpeg" alt="Konfigurasi file .env untuk database db_mahasiswa">
+                <figcaption>Gambar 25. Konfigurasi file .env untuk database db_mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-26.jpeg" alt="Kode model Mahasiswa">
+                <figcaption>Gambar 26. Pembuatan model Mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-27.jpeg" alt="Perintah membuat migration create_mahasiswas_table">
+                <figcaption>Gambar 27. Pembuatan migration tabel mahasiswas.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-28.jpeg" alt="Struktur tabel mahasiswas pada file migration">
+                <figcaption>Gambar 28. Struktur tabel mahasiswas pada migration.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-29.jpeg" alt="Menjalankan migration untuk tabel mahasiswas">
+                <figcaption>Gambar 29. Menjalankan migration untuk tabel mahasiswas.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-30.jpeg" alt="Perintah membuat MahasiswaSeeder">
+                <figcaption>Gambar 30. Pembuatan file MahasiswaSeeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-31.jpeg" alt="Kode MahasiswaSeeder untuk data awal mahasiswa">
+                <figcaption>Gambar 31. Pembuatan data awal pada MahasiswaSeeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-32.jpeg" alt="Pemanggilan MahasiswaSeeder pada DatabaseSeeder">
+                <figcaption>Gambar 32. Pemanggilan MahasiswaSeeder pada DatabaseSeeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-33.jpeg" alt="Menjalankan php artisan migrate --seed">
+                <figcaption>Gambar 33. Menjalankan seeder melalui perintah migrate --seed.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-34.jpeg" alt="Route resource untuk halaman mahasiswa">
+                <figcaption>Gambar 34. Route resource untuk halaman mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-35.jpeg" alt="Kode MahasiswaController untuk CRUD mahasiswa">
+                <figcaption>Gambar 35. Controller CRUD untuk data mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-36.jpeg" alt="Kode index.blade.php untuk daftar mahasiswa">
+                <figcaption>Gambar 36. View index untuk menampilkan daftar mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-37.jpeg" alt="Kode create.blade.php untuk tambah mahasiswa">
+                <figcaption>Gambar 37. View create untuk menambah data mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-38.jpeg" alt="Kode edit.blade.php untuk mengubah data mahasiswa">
+                <figcaption>Gambar 38. View edit untuk mengubah data mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-39.jpeg" alt="Output awal daftar mahasiswa">
+                <figcaption>Gambar 39. Output awal daftar mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-40.jpeg" alt="Form tambah mahasiswa baru">
+                <figcaption>Gambar 40. Tampilan form tambah mahasiswa baru.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-41.jpeg" alt="Output daftar mahasiswa setelah data baru ditambahkan">
+                <figcaption>Gambar 41. Output daftar mahasiswa setelah penambahan data.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-42.jpeg" alt="Konfirmasi hapus data mahasiswa">
+                <figcaption>Gambar 42. Konfirmasi sebelum menghapus data mahasiswa.</figcaption>
               </figure>
             </section>
           </article>
