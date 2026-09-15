@@ -44,6 +44,7 @@
           <div class="btn-group flex-wrap" role="group" aria-label="Filter laporan praktikum">
             <button type="button" class="btn btn-outline-light btn-sm laprak-filter active" data-filter="all">All</button>
             <button type="button" class="btn btn-outline-light btn-sm laprak-filter" data-filter="Pemrograman Web">Pemrograman Web</button>
+            <button type="button" class="btn btn-outline-light btn-sm laprak-filter" data-filter="Aplikasi Mobile">Aplikasi Mobile</button>
           </div>
         </div>
 
@@ -73,6 +74,22 @@
                 <div class="mt-auto d-flex flex-wrap gap-2">
                   <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#laprakModalMigration">Baca Laporan</button>
                   <a class="btn btn-sm btn-outline-dark" href="https://github.com/FadilSadBoy20/PraktikumPeweb" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github me-1"></i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 laprak-item" data-course="Aplikasi Mobile">
+            <div class="card h-100 laprak-card border-0 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-primary align-self-start mb-3">Aplikasi Mobile</span>
+                <h5 class="card-title">Widget Input dan Validasi Form pada Flutter</h5>
+                <p class="card-text small text-muted">Laporan praktikum pembuatan formulir sederhana dengan TextField dan TextFormField, validasi input, serta tugas aplikasi kalkulator Kabataku menggunakan framework Flutter.</p>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#laprakModalFlutter">Baca Laporan</button>
+                  <a class="btn btn-sm btn-outline-dark" href="https://github.com/FadilSadBoy20/Praktikum_A_Aplikasi-Mobile_Fadil-Insanus-Siddik_2411532013" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-github me-1"></i>GitHub
                   </a>
                 </div>
@@ -671,6 +688,475 @@
                 <img src="images/laprak-pw-migration-42.jpeg" alt="Konfirmasi hapus data mahasiswa">
                 <figcaption>Gambar 42. Konfirmasi sebelum menghapus data mahasiswa.</figcaption>
               </figure>
+            </section>
+          </article>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="laprakModalFlutter" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title">Widget Input dan Validasi Form pada Flutter</h5>
+            <p class="small text-muted mb-0">Praktikum Aplikasi Mobile</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="badge text-bg-primary mb-3">Aplikasi Mobile</span>
+
+          <article class="laprak-report">
+            <section>
+              <h6>1. Pendahuluan</h6>
+              <p>
+                Flutter merupakan salah satu framework modern yang digunakan untuk mengembangkan aplikasi mobile.
+                Framework ini menyediakan berbagai macam widget yang dapat digunakan untuk membuat antarmuka pengguna
+                yang dinamis dan responsif. Dalam pengembangan aplikasi, salah satu hal yang penting adalah bagaimana
+                aplikasi dapat menerima, mengelola, serta melakukan validasi terhadap input yang diberikan oleh
+                pengguna. Untuk kebutuhan input teks, Flutter menyediakan dua widget yang umum digunakan, yaitu
+                TextField dan TextFormField. TextField merupakan widget dasar yang memiliki fleksibilitas dalam
+                mengatur tampilan maupun perilakunya, sehingga cocok digunakan pada kebutuhan sederhana seperti fitur
+                pencarian atau input teks tunggal. Sementara itu, TextFormField memiliki fitur yang lebih lengkap
+                karena dapat digunakan bersama widget Form dan mendukung proses validasi melalui properti validator,
+                sehingga aturan validasi dapat ditentukan secara langsung dan pesan kesalahan dapat ditampilkan
+                ketika input yang diberikan tidak sesuai.
+              </p>
+              <p>
+                Pada praktikum ini, kedua widget tersebut diimplementasikan untuk memahami karakteristik serta
+                penggunaan masing-masing widget. Implementasi pertama dilakukan dengan membuat formulir sederhana
+                menggunakan TextField dan TextEditingController untuk menerima serta mengelola input pengguna,
+                kemudian memberikan informasi atau umpan balik melalui SnackBar. Selanjutnya, dilakukan pembuatan
+                formulir menggunakan TextFormField yang dilengkapi dengan proses validasi. Pada bagian ini,
+                GlobalKey digunakan untuk membantu memastikan bahwa data yang dimasukkan telah memenuhi aturan yang
+                ditentukan. Selain membahas widget input, praktikum juga mencakup beberapa konsep pendukung, seperti
+                penggunaan StatefulWidget dalam mengelola state, penerapan metode dispose() untuk membersihkan
+                resource agar tidak terjadi kebocoran memori, serta penggunaan kata kunci const sebagai salah satu
+                upaya optimasi kinerja aplikasi. Melalui praktikum ini, diharapkan dapat diperoleh pemahaman
+                mengenai penggunaan widget input pada Flutter, pengelolaan state dan controller, proses validasi
+                input, serta penerapan praktik yang tepat dalam membuat formulir yang mudah digunakan dan memiliki
+                kinerja yang baik.
+              </p>
+            </section>
+
+            <section>
+              <h6>2. Tujuan</h6>
+              <ul>
+                <li>Memahami konsep dasar serta perbedaan antara widget TextField dan TextFormField, kemudian mampu menerapkannya dalam pembuatan formulir sederhana pada Flutter untuk menerima dan mengelola input dari pengguna.</li>
+                <li>Mampu menggunakan TextEditingController untuk mengatur nilai masukan, memanfaatkan GlobalKey dalam pengelolaan state formulir secara menyeluruh, serta mengimplementasikan metode validator untuk memvalidasi data berdasarkan aturan tertentu, seperti kolom yang wajib diisi dan format email yang benar.</li>
+                <li>Memahami serta menerapkan metode lifecycle dispose() untuk membersihkan resource sehingga dapat mencegah terjadinya kebocoran memori, sekaligus menggunakan setState() untuk memperbarui tampilan widget ketika terjadi perubahan pada state.</li>
+                <li>Mampu memberikan umpan balik kepada pengguna melalui SnackBar dan menerapkan praktik yang baik dalam pengembangan formulir agar mudah digunakan, memiliki performa yang optimal, serta sesuai dengan prinsip clean code.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h6>3. Langkah Pengerjaan</h6>
+              <p>
+                Langkah pengerjaan terbagi menjadi dua bagian. Bagian pertama adalah praktikum, yang terdiri dari
+                implementasi basic form menggunakan TextField dan implementasi form validation menggunakan
+                TextFormField. Bagian kedua adalah tugas berupa pembuatan aplikasi kalkulator Kabataku. Setiap
+                tahapan disertai screenshot potongan kode dan hasil tampilan aplikasi.
+              </p>
+            </section>
+
+            <section>
+              <h6>3.1 Praktikum: Implementasi Basic Form dengan TextField (form-textfield.dart)</h6>
+              <ol>
+                <li>
+                  Membuat file baru bernama form-textfield.dart di dalam folder lib. Selanjutnya, melakukan import
+                  package Flutter Material Design yang menyediakan berbagai widget dasar untuk membangun antarmuka
+                  aplikasi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-1.png" alt="Membuat file form-textfield.dart dan import package Material">
+                    <figcaption>Gambar 1. Membuat file form-textfield.dart dan import package Material.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat class MyApp sebagai widget utama dengan menggunakan StatelessWidget, karena pada bagian
+                  ini tidak terdapat perubahan state. Class tersebut akan mengembalikan MaterialApp yang di dalamnya
+                  terdapat Scaffold dengan komponen AppBar dan body.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-2.png" alt="Class MyApp sebagai widget utama dengan MaterialApp dan Scaffold">
+                    <figcaption>Gambar 2. Class MyApp sebagai widget utama dengan MaterialApp dan Scaffold.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat class MyForm yang merupakan turunan dari StatefulWidget karena formulir akan mengelola
+                  state berupa input teks dari pengguna. Penggunaan StatefulWidget membutuhkan class State terpisah
+                  yang bertugas mengatur state dan logika dari formulir tersebut.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-3.png" alt="Class MyForm sebagai turunan StatefulWidget">
+                    <figcaption>Gambar 3. Class MyForm sebagai turunan StatefulWidget.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Pada class _MyFormState, mendeklarasikan variabel _textEditingController yang digunakan sebagai
+                  controller untuk mengambil dan mengelola nilai yang dimasukkan melalui TextField. Controller ini
+                  berperan penting dalam memperoleh data input dari pengguna.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-4.png" alt="Deklarasi _textEditingController pada class _MyFormState">
+                    <figcaption>Gambar 4. Deklarasi _textEditingController pada class _MyFormState.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Melakukan override pada method dispose() untuk membersihkan textEditingController ketika widget
+                  sudah tidak digunakan atau dihapus dari widget tree. Langkah ini diperlukan untuk mencegah
+                  terjadinya memory leak, karena controller perlu dihentikan secara manual.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-5.png" alt="Override method dispose() untuk membersihkan controller">
+                    <figcaption>Gambar 5. Override method dispose() untuk membersihkan controller.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Pada method build(), membuat struktur tampilan menggunakan Padding untuk memberikan jarak antara
+                  konten dengan tepi layar. Kemudian menggunakan Column untuk menyusun beberapa widget secara
+                  vertikal dengan crossAxisAlignment.start agar seluruh konten berada dalam posisi rata kiri.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-6.png" alt="Struktur build() dengan Padding dan Column">
+                    <figcaption>Gambar 6. Struktur build() dengan Padding dan Column.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Menambahkan widget Text yang berfungsi sebagai label atau instruksi bagi pengguna. Setelahnya,
+                  menambahkan SizedBox untuk memberikan jarak vertikal sebesar 10 pixel sebelum komponen TextField.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-7.png" alt="Widget Text sebagai label dan SizedBox sebagai jarak vertikal">
+                    <figcaption>Gambar 7. Widget Text sebagai label dan SizedBox sebagai jarak vertikal.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat widget TextField dan mengatur beberapa properti decoration agar tampilannya lebih
+                  informatif. InputDecoration digunakan dengan beberapa properti, yaitu labelText sebagai label,
+                  hintText sebagai placeholder, border: OutlineInputBorder() untuk memberikan bentuk border kotak,
+                  serta prefixIcon untuk menampilkan ikon pada bagian kiri input.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-8.png" alt="Widget TextField dengan pengaturan InputDecoration">
+                    <figcaption>Gambar 8. Widget TextField dengan pengaturan InputDecoration.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Pada TextField tersebut, menambahkan properti controller yang dihubungkan dengan
+                  _textEditingController. Selain itu, menggunakan keyboardType untuk menentukan jenis keyboard yang
+                  ditampilkan, yaitu tipe text, serta onChanged sebagai event listener yang akan dijalankan setiap
+                  kali terjadi perubahan pada input.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-9.png" alt="Properti controller, keyboardType, dan onChanged pada TextField">
+                    <figcaption>Gambar 9. Properti controller, keyboardType, dan onChanged pada TextField.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Menambahkan kembali SizedBox dengan nilai height 20 untuk memberikan jarak antara TextField dengan
+                  tombol yang akan dibuat setelahnya.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-10.png" alt="SizedBox sebagai jarak antara TextField dan tombol">
+                    <figcaption>Gambar 10. SizedBox sebagai jarak antara TextField dan tombol.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat ElevatedButton dengan method onPressed yang berfungsi mengambil nilai input dari controller
+                  dan menampilkannya melalui SnackBar. Tombol tersebut juga diberikan pengaturan tampilan menggunakan
+                  styleFrom, dengan warna latar amber dan warna teks hitam.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-11.png" alt="ElevatedButton dengan aksi menampilkan SnackBar">
+                    <figcaption>Gambar 11. ElevatedButton dengan aksi menampilkan SnackBar.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Setelah seluruh kode selesai dibuat, menjalankan program untuk melihat hasil implementasinya.
+                  Tampilan aplikasi yang dihasilkan dapat dilihat pada gambar berikut.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-12.png" alt="Tampilan aplikasi basic form dengan TextField">
+                    <figcaption>Gambar 12. Tampilan aplikasi basic form dengan TextField.</figcaption>
+                  </figure>
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <h6>3.2 Praktikum: Implementasi Form Validation dengan TextFormField (form-textformfield.dart)</h6>
+              <ol>
+                <li>
+                  Seperti pada file sebelumnya, mengimpor package Material dan membuat fungsi main() sebagai fungsi
+                  utama untuk menjalankan aplikasi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-13.png" alt="Import package Material dan fungsi main() pada form-textformfield.dart">
+                    <figcaption>Gambar 13. Import package Material dan fungsi main() pada form-textformfield.dart.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat class MyApp sebagai widget utama. Pada bagian AppBar, menggunakan judul "Basic Form
+                  TextFormField" agar dapat membedakan implementasi ini dengan penggunaan TextField sebelumnya.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-14.png" alt="Class MyApp dengan judul &quot;Basic Form TextFormField&quot;">
+                    <figcaption>Gambar 14. Class MyApp dengan judul "Basic Form TextFormField".</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat class MyFormText yang merupakan turunan dari StatefulWidget karena formulir yang dibuat
+                  akan mengelola state serta memiliki proses validasi terhadap input pengguna.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-15.png" alt="Class MyFormText sebagai turunan StatefulWidget">
+                    <figcaption>Gambar 15. Class MyFormText sebagai turunan StatefulWidget.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Pada class _MyFormTextState, mendeklarasikan _formKey dengan tipe GlobalKey&lt;FormState&gt;.
+                  Variabel ini digunakan untuk mengakses state dari widget Form dan menjalankan proses validasi.
+                  Selain itu, membuat dua controller yang digunakan untuk mengelola input pada field nama dan email.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-16.png" alt="Deklarasi _formKey dan controller nama serta email">
+                    <figcaption>Gambar 16. Deklarasi _formKey dan controller nama serta email.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Melakukan override pada method dispose() untuk membersihkan kedua controller, yaitu controller
+                  nama dan email, ketika widget sudah dihapus dari widget tree. Hal ini dilakukan agar resource yang
+                  digunakan dapat dilepaskan dengan baik.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-17.png" alt="Override dispose() untuk membersihkan kedua controller">
+                    <figcaption>Gambar 17. Override dispose() untuk membersihkan kedua controller.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat method _submitForm() yang akan dijalankan ketika tombol submit ditekan. Di dalam method
+                  tersebut, menggunakan _formKey.currentState!.validate() untuk menjalankan validasi pada seluruh
+                  TextFormField yang terdapat dalam Form. Jika proses validasi berhasil dan menghasilkan nilai true,
+                  maka nilai dari kedua controller akan diambil dan ditampilkan kepada pengguna melalui SnackBar.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-18.png" alt="Method _submitForm() dengan proses validasi form">
+                    <figcaption>Gambar 18. Method _submitForm() dengan proses validasi form.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Pada method build(), membungkus layout menggunakan widget Form dan menghubungkannya dengan
+                  _formKey melalui properti key. Di dalam Form tersebut digunakan Padding dan Column untuk mengatur
+                  tata letak komponen formulir.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-19.png" alt="Widget Form yang terhubung dengan _formKey">
+                    <figcaption>Gambar 19. Widget Form yang terhubung dengan _formKey.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat TextFormField pertama yang digunakan sebagai input nama dengan menghubungkannya ke
+                  _nameController serta memberikan pengaturan decoration yang sesuai. Perbedaan utama dengan
+                  TextField sebelumnya adalah adanya properti validator yang digunakan untuk melakukan pemeriksaan
+                  terhadap input. Validator menerima nilai input sebagai parameter dan mengembalikan String apabila
+                  terdapat kesalahan atau null apabila input dinyatakan valid.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-20.png" alt="TextFormField nama dengan properti validator">
+                    <figcaption>Gambar 20. TextFormField nama dengan properti validator.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Menambahkan SizedBox untuk memberikan jarak antara TextFormField pertama dengan field berikutnya
+                  sehingga tampilan formulir menjadi lebih rapi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-21.png" alt="SizedBox sebagai jarak antar field">
+                    <figcaption>Gambar 21. SizedBox sebagai jarak antar field.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat TextFormField kedua untuk menerima input email menggunakan _emailController. Pada bagian
+                  validator, dilakukan pemeriksaan terhadap dua kondisi, yaitu memastikan field tidak kosong dan
+                  memeriksa apakah format email yang dimasukkan valid, salah satunya dengan memastikan terdapat
+                  karakter '@'.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-22.png" alt="TextFormField email dengan validasi format email">
+                    <figcaption>Gambar 22. TextFormField email dengan validasi format email.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Menambahkan SizedBox kembali untuk memberikan jarak antara TextFormField dengan tombol submit.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-23.png" alt="SizedBox sebagai jarak menuju tombol submit">
+                    <figcaption>Gambar 23. SizedBox sebagai jarak menuju tombol submit.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat SizedBox dengan properti width: double.infinity agar tombol memiliki lebar yang mengikuti
+                  ukuran layar. Di dalam SizedBox tersebut, menambahkan ElevatedButton yang memiliki properti
+                  onPressed untuk memanggil method _submitForm() ketika tombol ditekan.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-24.png" alt="ElevatedButton submit dengan lebar penuh layar">
+                    <figcaption>Gambar 24. ElevatedButton submit dengan lebar penuh layar.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Setelah seluruh implementasi selesai, menjalankan aplikasi untuk melihat hasil dari formulir yang
+                  telah dibuat.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-25.png" alt="Tampilan aplikasi form validation dengan TextFormField">
+                    <figcaption>Gambar 25. Tampilan aplikasi form validation dengan TextFormField.</figcaption>
+                  </figure>
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <h6>3.3 Tugas: Aplikasi Kalkulator Kabataku (main.dart)</h6>
+              <p>
+                Pada bagian tugas, dibuat aplikasi kalkulator sederhana bernama Kabataku menggunakan framework
+                Flutter. Aplikasi ini mengimplementasikan empat operasi matematika dasar, yaitu perkalian (kali),
+                pembagian (bagi), penjumlahan (tambah), dan pengurangan (kurang). Aplikasi menampilkan dua TextField
+                sebagai input angka, empat tombol operasi dengan warna berbeda, serta container untuk menampilkan
+                hasil perhitungan.
+              </p>
+              <ol>
+                <li>
+                  Melakukan import package dan setup awal aplikasi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-26.png" alt="Import package dan setup awal aplikasi">
+                    <figcaption>Gambar 26. Import package dan setup awal aplikasi.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat widget utama (MyApp).
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-27.png" alt="Widget utama MyApp">
+                    <figcaption>Gambar 27. Widget utama MyApp.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat halaman kalkulator (KalkulatorPage).
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-28.png" alt="Halaman kalkulator (KalkulatorPage)">
+                    <figcaption>Gambar 28. Halaman kalkulator (KalkulatorPage).</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat state management dan controller.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-29.png" alt="State management dan controller">
+                    <figcaption>Gambar 29. State management dan controller.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat fungsi perhitungan (kali, bagi, tambah, kurang).
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-30.png" alt="Fungsi perhitungan kali, bagi, tambah, dan kurang">
+                    <figcaption>Gambar 30. Fungsi perhitungan kali, bagi, tambah, dan kurang.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat UI input fields.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-31.png" alt="UI input fields">
+                    <figcaption>Gambar 31. UI input fields.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat tombol operasi (4 tombol).
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-32.png" alt="Empat tombol operasi">
+                    <figcaption>Gambar 32. Empat tombol operasi.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat display hasil.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-33.png" alt="Display hasil perhitungan">
+                    <figcaption>Gambar 33. Display hasil perhitungan.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat header aplikasi dengan icon dan deskripsi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-34.png" alt="Header aplikasi dengan icon dan deskripsi">
+                    <figcaption>Gambar 34. Header aplikasi dengan icon dan deskripsi.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat dua TextField untuk input angka.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-35.png" alt="Dua TextField untuk input angka">
+                    <figcaption>Gambar 35. Dua TextField untuk input angka.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat grid 2x2 untuk 4 tombol operasi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-36.png" alt="Grid 2x2 untuk empat tombol operasi">
+                    <figcaption>Gambar 36. Grid 2x2 untuk empat tombol operasi.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat container untuk menampilkan hasil.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-37.png" alt="Container untuk menampilkan hasil">
+                    <figcaption>Gambar 37. Container untuk menampilkan hasil.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Melakukan dispose controller saat widget dihancurkan.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-38.png" alt="Dispose controller saat widget dihancurkan">
+                    <figcaption>Gambar 38. Dispose controller saat widget dihancurkan.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Melakukan demonstrasi hasil aplikasi yang dijalankan melalui website (Flutter web).
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-39.png" alt="Demonstrasi tampilan awal aplikasi">
+                    <figcaption>Gambar 39. Demonstrasi tampilan awal aplikasi.</figcaption>
+                  </figure>
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-40.png" alt="Hasil operasi kali">
+                    <figcaption>Gambar 40. Hasil operasi kali.</figcaption>
+                  </figure>
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-41.png" alt="Hasil operasi bagi">
+                    <figcaption>Gambar 41. Hasil operasi bagi.</figcaption>
+                  </figure>
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-42.png" alt="Hasil operasi tambah">
+                    <figcaption>Gambar 42. Hasil operasi tambah.</figcaption>
+                  </figure>
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-43.png" alt="Hasil operasi kurang">
+                    <figcaption>Gambar 43. Hasil operasi kurang.</figcaption>
+                  </figure>
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <h6>4. Kesimpulan</h6>
+              <p>
+                Berdasarkan praktikum yang telah dilaksanakan, aplikasi Kalkulator Kabataku berhasil dibuat
+                menggunakan framework Flutter dengan bahasa pemrograman Dart. Aplikasi ini mengimplementasikan empat
+                operasi matematika dasar, yaitu perkalian (kali), pembagian (bagi), penjumlahan (tambah), dan
+                pengurangan (kurang) yang disingkat menjadi "Kabataku". Dalam pengembangannya, aplikasi ini
+                memanfaatkan konsep State Management melalui StatefulWidget untuk mengelola perubahan data secara
+                dinamis, serta menggunakan TextEditingController untuk mengontrol input pengguna pada TextField.
+                Aplikasi dirancang dengan antarmuka yang intuitif dan user-friendly, menampilkan dua TextField
+                sebagai input angka pertama dan kedua, empat tombol operasi yang dibedakan dengan warna berbeda
+                (kuning untuk perkalian, hijau untuk pembagian, biru untuk penjumlahan, dan merah untuk pengurangan)
+                dalam layout GridView 2x2, serta hasil perhitungan ditampilkan dalam container dengan format yang
+                jelas, misalnya "10 + 5 = 15".
+              </p>
+              <p>
+                Dari segi fungsionalitas, aplikasi dilengkapi dengan berbagai validasi input untuk meningkatkan user
+                experience dan mencegah error, antara lain validasi input kosong, validasi format angka menggunakan
+                FilteringTextInputFormatter yang membatasi input hanya berupa angka dan titik desimal, serta
+                validasi khusus untuk operasi pembagian yang mencegah pembagian dengan angka nol. Selain itu,
+                aplikasi juga menyediakan fitur reset melalui tombol refresh pada AppBar yang memungkinkan pengguna
+                menghapus semua input dan hasil perhitungan sekaligus.
+              </p>
+              <p>
+                Secara keseluruhan, aplikasi Kalkulator Kabataku telah memenuhi seluruh requirement yang ditetapkan
+                dalam tugas praktikum, yaitu penggunaan dua widget input (TextField) untuk menerima nilai inputan,
+                implementasi ElevatedButton untuk mengeksekusi operasi perhitungan, serta penggunaan widget Text
+                untuk menampilkan hasil operasi. Aplikasi ini juga menunjukkan penerapan prinsip-prinsip dasar
+                pemrograman Flutter seperti widget tree, state management, event handling, serta styling dan theming
+                menggunakan Material Design 3. Dengan demikian, praktikum ini memberikan pemahaman yang komprehensif
+                mengenai pengembangan aplikasi mobile menggunakan Flutter, khususnya dalam membuat aplikasi
+                kalkulator sederhana dengan multiple operations dan validasi input yang robust.
+              </p>
             </section>
           </article>
         </div>
