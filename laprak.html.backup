@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laprak - Fadil</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logowebsitetr.png">
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="images/logowebsitetr.png" alt="Logo" class="me-2" style="height: 28px;">
+        <span>Fadil Web<span class="text-primary">.</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain5" aria-controls="navMain5" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain5">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="laprak.html">Laprak</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mt-5 pt-5">
+    <section class="py-5">
+      <div class="container p-4 rounded text-light" style="background: rgba(0,0,0,0.62);">
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-4">
+          <div>
+            <h2 class="h4 mb-1">Laporan Praktikum</h2>
+            <p class="text-white-50 small mb-0">Kumpulan laporan praktikum berdasarkan mata kuliah.</p>
+          </div>
+
+          <div class="btn-group flex-wrap" role="group" aria-label="Filter laporan praktikum">
+            <button type="button" class="btn btn-outline-light btn-sm laprak-filter active" data-filter="all">All</button>
+            <button type="button" class="btn btn-outline-light btn-sm laprak-filter" data-filter="Pemrograman Web">Pemrograman Web</button>
+            <button type="button" class="btn btn-outline-light btn-sm laprak-filter" data-filter="Aplikasi Mobile">Aplikasi Mobile</button>
+          </div>
+        </div>
+
+        <div class="row g-4" id="laprakGrid">
+          <div class="col-md-6 col-lg-4 laprak-item" data-course="Aplikasi Mobile">
+            <div class="card h-100 laprak-card border-0 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-primary align-self-start mb-3">Aplikasi Mobile</span>
+                <h5 class="card-title">Pengenalan Widgets Stateless, Stateful, & Manajemen State Dasar</h5>
+                <p class="card-text small text-muted">Laporan praktikum penerapan StatelessWidget, StatefulWidget, dan setState() melalui pembuatan dashboard sederhana dengan Row, Column, ListTile, dan SingleChildScrollView untuk mengatur tampilan tombol aksi dan daftar transaksi.</p>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <a class="btn btn-sm btn-primary" href="laprak-widget-stateless-stateful.html" target="_blank">Baca Laporan</a>
+                  <a class="btn btn-sm btn-outline-dark" href="https://github.com/FadilSadBoy20/Praktikum_A_Aplikasi-Mobile_Fadil-Insanus-Siddik_2411532013" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github me-1"></i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 laprak-item" data-course="Pemrograman Web">
+            <div class="card h-100 laprak-card border-0 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-primary align-self-start mb-3">Pemrograman Web</span>
+                <h5 class="card-title">Pengenalan Framework Laravel</h5>
+                <p class="card-text small text-muted">Laporan praktikum instalasi kebutuhan sistem, pembuatan project Laravel, routing, controller, view, dan konsep MVC.</p>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <a class="btn btn-sm btn-primary" href="laprak-pengenalan-laravel.html" target="_blank">Baca Laporan</a>
+                  <a class="btn btn-sm btn-outline-dark" href="https://github.com/FadilSadBoy20/PrakPeweb2411532013" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github me-1"></i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 laprak-item" data-course="Pemrograman Web">
+            <div class="card h-100 laprak-card border-0 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-primary align-self-start mb-3">Pemrograman Web</span>
+                <h5 class="card-title">Migration, Seeding, Routing, Model, Controller, View</h5>
+                <p class="card-text small text-muted">Laporan praktikum pembuatan struktur database, pengisian data awal, routing, model, controller, dan tampilan aplikasi Laravel.</p>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <a class="btn btn-sm btn-primary" href="laprak-migration-seeding.html" target="_blank">Baca Laporan</a>
+                  <a class="btn btn-sm btn-outline-dark" href="https://github.com/FadilSadBoy20/PraktikumPeweb" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github me-1"></i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 laprak-item" data-course="Aplikasi Mobile">
+            <div class="card h-100 laprak-card border-0 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <span class="badge text-bg-primary align-self-start mb-3">Aplikasi Mobile</span>
+                <h5 class="card-title">Widget Input dan Validasi Form pada Flutter</h5>
+                <p class="card-text small text-muted">Laporan praktikum pembuatan formulir sederhana dengan TextField dan TextFormField, validasi input, serta tugas aplikasi kalkulator Kabataku menggunakan framework Flutter.</p>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <a class="btn btn-sm btn-primary" href="laprak-widget-input-validasi.html" target="_blank">Baca Laporan</a>
+                  <a class="btn btn-sm btn-outline-dark" href="https://github.com/FadilSadBoy20/Praktikum_A_Aplikasi-Mobile_Fadil-Insanus-Siddik_2411532013" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github me-1"></i>GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="laprakModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title">Pengenalan Framework Laravel</h5>
+            <p class="small text-muted mb-0">Pertemuan 7</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="badge text-bg-primary mb-3">Pemrograman Web</span>
+
+          <article class="laprak-report">
+            <section>
+              <h6>1. Pendahuluan</h6>
+              <p>
+                Laravel adalah salah satu framework PHP yang sering digunakan dalam pembuatan aplikasi web.
+                Framework ini menggunakan konsep arsitektur MVC atau Model-View-Controller, sehingga proses
+                pengembangan aplikasi dapat dilakukan dengan lebih teratur, rapi, dan mudah untuk dikelola.
+              </p>
+              <p>
+                Pada praktikum ini, mahasiswa dikenalkan dengan Laravel mulai dari pemahaman dasar tentang
+                framework Laravel, perangkat lunak yang dibutuhkan, struktur dasar project Laravel, sampai
+                dengan konsep MVC yang menjadi dasar utama dalam pengembangan aplikasi Laravel. Praktikum ini
+                menjadi tahap awal sebelum mahasiswa mengembangkan aplikasi web yang lebih kompleks menggunakan
+                framework Laravel.
+              </p>
+            </section>
+
+            <section>
+              <h6>2. Tujuan</h6>
+              <ul>
+                <li>Mahasiswa dapat memahami dasar-dasar framework Laravel sebagai framework PHP yang digunakan untuk membangun aplikasi web.</li>
+                <li>Mahasiswa dapat mengetahui tools dan kebutuhan awal yang diperlukan dalam pembuatan project Laravel.</li>
+                <li>Mahasiswa dapat mengenal struktur dasar Laravel serta memahami konsep MVC, yaitu Model, View, dan Controller.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h6>3. Alat atau Tools yang Dipakai</h6>
+              <ul>
+                <li>Laragon atau XAMPP</li>
+                <li>Visual Studio Code</li>
+                <li>Composer</li>
+                <li>Git</li>
+                <li>Node JS</li>
+                <li>NPM</li>
+                <li>GitHub</li>
+              </ul>
+            </section>
+
+            <section>
+              <h6>4. Langkah Pengerjaan</h6>
+              <p>
+                Pada bagian ini dilakukan persiapan dan pengaturan awal Laravel sesuai dengan modul praktikum.
+                Tahapan pengerjaan dimulai dari mengecek kebutuhan sistem, membuat project Laravel, menjalankan
+                project, hingga memahami struktur dasar Laravel serta konsep MVC.
+              </p>
+            </section>
+
+            <section>
+              <h6>4.1 Mengecek Kebutuhan Sistem Laravel</h6>
+              <p>
+                Sebelum membuat project Laravel, langkah pertama yang dilakukan adalah mengecek beberapa tools
+                yang diperlukan. Laravel membutuhkan PHP, Composer, Git, Node JS, dan NPM agar proses pembuatan
+                serta pengembangan project dapat berjalan dengan baik.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-06 111126.png" alt="Pengecekan versi PHP, Composer, Git, Node JS, dan NPM">
+                <figcaption>Gambar 1. Pengecekan versi PHP, Composer, Git, Node JS, dan NPM.</figcaption>
+              </figure>
+              <p>
+                Setelah perintah dijalankan, terminal akan menampilkan versi dari masing-masing tools. Apabila
+                semua tools sudah menampilkan versinya, maka tools tersebut sudah terpasang dengan benar dan
+                siap digunakan.
+              </p>
+            </section>
+
+            <section>
+              <h6>4.2 Membuat Project Laravel</h6>
+              <p>
+                Setelah seluruh kebutuhan sistem terpenuhi, langkah berikutnya adalah membuat project Laravel.
+                Pada praktikum ini, project Laravel dibuat menggunakan Composer atau Laravel installer.
+              </p>
+              <p class="mb-2">Perintah yang digunakan adalah:</p>
+              <pre><code>composer create-project laravel/laravel=^12 PrakWeb1 --prefer-dist</code></pre>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 231145.png" alt="Proses pembuatan project Laravel menggunakan Composer">
+                <figcaption>Gambar 2. Proses pembuatan project Laravel menggunakan Composer.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 231231.png" alt="Project Laravel berhasil dibuat dan dependency selesai dipasang">
+                <figcaption>Gambar 3. Project Laravel berhasil dibuat dan dependency selesai dipasang.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.3 Masuk ke Folder Project</h6>
+              <p>
+                Setelah project berhasil dibuat, langkah selanjutnya adalah masuk ke folder project dengan
+                menggunakan perintah berikut:
+              </p>
+              <pre><code>cd PrakWeb1</code></pre>
+            </section>
+
+            <section>
+              <h6>4.4 Menjalankan Project Laravel</h6>
+              <p>
+                Untuk menjalankan project Laravel, digunakan perintah Artisan. Setelah perintah dijalankan,
+                Laravel akan menjalankan server lokal. Biasanya aplikasi dapat dibuka melalui browser dengan
+                alamat yang tersedia. Jika berhasil, halaman awal Laravel akan muncul pada browser.
+              </p>
+              <pre><code>php artisan serve</code></pre>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 231650.png" alt="Halaman awal Laravel berhasil tampil di browser">
+                <figcaption>Gambar 4. Halaman awal Laravel berhasil tampil di browser.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.5 Menampilkan Halaman Hello World</h6>
+              <p>
+                Setelah project Laravel berhasil dijalankan, langkah berikutnya adalah mencoba membuat halaman
+                sederhana. Tujuan dari langkah ini adalah memastikan bahwa routing dan tampilan pada Laravel
+                sudah dapat berjalan dengan baik.
+              </p>
+              <p class="mb-2">Route sederhana dibuat pada file <strong>routes/web.php</strong> seperti berikut:</p>
+              <pre><code>Route::get('/hello', function () {
+    return 'Hello World';
+});</code></pre>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 231913.png" alt="Penambahan route hello pada file web.php">
+                <figcaption>Gambar 5. Penambahan route /hello pada file web.php.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 232011.png" alt="Tampilan Hello World pada browser">
+                <figcaption>Gambar 6. Tampilan Hello World pada browser.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.6 Challenge</h6>
+              <p>Pada bagian challenge, mahasiswa diminta membuat route, controller, dan view sederhana.</p>
+              <ul>
+                <li>Membuat controller dengan nama <strong>UserController</strong>.</li>
+                <li>Di dalam controller membuat function dengan nama <strong>index</strong>.</li>
+                <li>Membuat view di dalam folder <strong>resources/views/user/index.blade.php</strong>.</li>
+                <li>Pada file index, membuat tampilan HTML sederhana.</li>
+                <li>Membuat routing <strong>/user</strong> untuk menampilkan view tersebut.</li>
+              </ul>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 234104.png" alt="Pembuatan UserController dan function index">
+                <figcaption>Gambar 7. Pembuatan UserController dan function index.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 235136.png" alt="Pembuatan file view index.blade.php">
+                <figcaption>Gambar 8. Pembuatan file view index.blade.php.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 235324.png" alt="Penambahan route user pada file web.php">
+                <figcaption>Gambar 9. Penambahan route /user pada file web.php.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/Screenshot 2026-05-11 235031.png" alt="Tampilan halaman user pada browser">
+                <figcaption>Gambar 10. Tampilan halaman user pada browser.</figcaption>
+              </figure>
+            </section>
+          </article>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="laprakModalMigration" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title">Migration, Seeding, Routing, Model, Controller, View</h5>
+            <p class="small text-muted mb-0">Praktikum Laravel</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="badge text-bg-primary mb-3">Pemrograman Web</span>
+
+          <article class="laprak-report">
+            <section>
+              <h6>1. Pendahuluan</h6>
+              <p>
+                Perkembangan teknologi saat ini membuat aplikasi web semakin banyak digunakan dalam berbagai
+                bidang. Untuk membuat aplikasi web yang baik dan terstruktur, diperlukan framework yang dapat
+                membantu proses pengembangan menjadi lebih mudah, efisien, dan rapi. Salah satu framework PHP
+                yang banyak digunakan adalah Laravel. Laravel menyediakan banyak fitur untuk membantu pembuatan
+                aplikasi web, mulai dari pengelolaan database, pengaturan tampilan, sampai pengelolaan alur
+                program menggunakan konsep MVC atau Model View Controller.
+              </p>
+              <p>
+                Pada praktikum ini dipelajari beberapa materi dasar dalam penggunaan Laravel, yaitu migration,
+                seeding, routing, model, controller, dan view. Migration digunakan untuk membuat dan mengatur
+                struktur database menggunakan kode program, sedangkan seeding digunakan untuk mengisi data awal
+                ke dalam database. Routing digunakan untuk mengatur URL aplikasi, model digunakan untuk
+                berhubungan dengan database, controller digunakan untuk mengatur logika program, dan view
+                digunakan untuk menampilkan halaman antarmuka kepada pengguna menggunakan Blade Template.
+              </p>
+            </section>
+
+            <section>
+              <h6>2. Tujuan Praktikum</h6>
+              <p>
+                Praktikum ini bertujuan untuk memberikan pemahaman dan keterampilan dasar kepada mahasiswa dalam
+                membangun aplikasi web modern berbasis framework PHP dengan menerapkan konsep MVC. Mahasiswa
+                diharapkan mampu memahami struktur dan alur kerja Laravel sebagai salah satu framework yang
+                banyak digunakan dalam pengembangan aplikasi web.
+              </p>
+              <p>
+                Selain itu, praktikum ini bertujuan melatih kemampuan mahasiswa dalam mengelola database
+                menggunakan migration dan seeding, membuat serta mengatur routing aplikasi, membangun model
+                untuk interaksi data, membuat tampilan antarmuka menggunakan Blade Template, serta mengembangkan
+                controller sebagai penghubung antara model dan view. Dengan mempelajari materi tersebut,
+                mahasiswa diharapkan mampu memahami proses pengembangan aplikasi secara terstruktur, efisien,
+                dan mudah dipelihara.
+              </p>
+            </section>
+
+            <section>
+              <h6>3. Alat dan Bahan</h6>
+              <ul>
+                <li>Komputer atau laptop</li>
+                <li>XAMPP</li>
+                <li>Visual Studio Code</li>
+                <li>Composer</li>
+                <li>Git</li>
+                <li>Node JS</li>
+                <li>NPM</li>
+              </ul>
+            </section>
+
+            <section>
+              <h6>4. Langkah Praktikum</h6>
+              <p>
+                Langkah praktikum dimulai dari konfigurasi database, pembuatan migration, pengisian data awal
+                menggunakan seeder, pengaturan routing, pembuatan model, pembuatan controller, hingga pembuatan
+                tampilan menggunakan Blade. Setiap tahap saling berhubungan sehingga aplikasi Laravel dapat
+                mengambil data dari database dan menampilkannya pada halaman web.
+              </p>
+            </section>
+
+            <section>
+              <h6>4.1 Konfigurasi Database</h6>
+              <p>
+                Langkah pertama adalah membuka file <strong>.env</strong>, kemudian menyesuaikan konfigurasi
+                koneksi database. Database menggunakan MySQL dengan host <strong>127.0.0.1</strong>, port
+                <strong>3306</strong>, username <strong>root</strong>, dan nama database
+                <strong>praktikum_laravel</strong>. Setelah itu, database baru dibuat melalui phpMyAdmin agar
+                Laravel memiliki tempat untuk menyimpan tabel dan data aplikasi.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-01.jpeg" alt="Konfigurasi database praktikum_laravel pada file .env">
+                <figcaption>Gambar 1. Konfigurasi koneksi database Laravel.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-02.jpeg" alt="Pembuatan database praktikum_laravel di phpMyAdmin">
+                <figcaption>Gambar 2. Pembuatan database baru melalui phpMyAdmin.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.2 Migration</h6>
+              <p>
+                Migration digunakan untuk membuat struktur tabel database melalui kode program. Pada praktikum
+                ini dibuat migration untuk tabel <strong>products</strong> menggunakan perintah:
+              </p>
+              <pre><code>php artisan make:migration create_products_table</code></pre>
+              <p>
+                Setelah file migration berhasil dibuat, file tersebut dibuka pada folder
+                <strong>database/migrations</strong>. Pada method <strong>up()</strong>, dibuat tabel
+                <strong>products</strong> dengan beberapa kolom, yaitu <strong>id</strong> sebagai primary key,
+                <strong>name</strong> untuk menyimpan nama produk, <strong>price</strong> untuk menyimpan harga,
+                <strong>description</strong> untuk menyimpan deskripsi produk, serta
+                <strong>timestamps()</strong> untuk membuat kolom <strong>created_at</strong> dan
+                <strong>updated_at</strong> secara otomatis.
+              </p>
+              <p>
+                Pada method <strong>down()</strong>, terdapat perintah untuk menghapus tabel
+                <strong>products</strong> apabila migration dibatalkan atau dilakukan rollback. Setelah struktur
+                migration selesai dibuat, perintah <strong>php artisan migrate</strong> dijalankan agar tabel
+                dibuat di database. Jika berhasil, tabel <strong>products</strong> akan muncul pada database
+                bersama tabel bawaan Laravel lainnya.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-03.jpeg" alt="Perintah membuat migration create_products_table">
+                <figcaption>Gambar 3. Pembuatan file migration create_products_table.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-04.jpeg" alt="Kode migration untuk tabel products">
+                <figcaption>Gambar 4. Struktur tabel products pada file migration.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-05.jpeg" alt="Menjalankan perintah php artisan migrate">
+                <figcaption>Gambar 5. Proses menjalankan migration.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-06.jpeg" alt="Tabel products berhasil muncul di database">
+                <figcaption>Gambar 6. Tabel products berhasil dibuat di database.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.3 Seeding</h6>
+              <p>
+                Seeding digunakan untuk memasukkan data awal ke dalam database secara otomatis. Pada praktikum
+                ini dibuat file seeder bernama <strong>ProductSeeder</strong> menggunakan perintah:
+              </p>
+              <pre><code>php artisan make:seeder ProductSeeder</code></pre>
+              <p>
+                Di dalam method <strong>run()</strong>, data produk dimasukkan ke tabel
+                <strong>products</strong> menggunakan perintah insert. Data awal yang digunakan adalah contoh
+                produk seperti Laptop dan Mouse, lengkap dengan harga dan deskripsi. Kolom
+                <strong>created_at</strong> dan <strong>updated_at</strong> diisi menggunakan fungsi
+                <strong>now()</strong> agar waktu pembuatan dan pembaruan data tercatat otomatis.
+              </p>
+              <p>
+                Setelah file seeder dibuat, pemanggilan <strong>ProductSeeder</strong> ditambahkan pada file
+                <strong>DatabaseSeeder.php</strong>. Selanjutnya perintah <strong>php artisan db:seed</strong>
+                dijalankan di terminal agar data awal masuk ke database. Seeder berguna untuk membuat data awal
+                atau data dummy sehingga proses pengujian aplikasi dapat dilakukan tanpa memasukkan data secara
+                manual satu per satu.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-07.jpeg" alt="Perintah membuat ProductSeeder">
+                <figcaption>Gambar 7. Pembuatan file ProductSeeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-08.jpeg" alt="Kode ProductSeeder untuk mengisi data products">
+                <figcaption>Gambar 8. Pengisian data awal produk pada seeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-09.jpeg" alt="Memanggil ProductSeeder pada DatabaseSeeder">
+                <figcaption>Gambar 9. Pemanggilan ProductSeeder pada DatabaseSeeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-10.jpeg" alt="Menjalankan perintah php artisan db:seed">
+                <figcaption>Gambar 10. Proses menjalankan seeder.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.4 Routing</h6>
+              <p>
+                Routing berfungsi untuk mengatur alamat URL yang dapat diakses oleh pengguna. Pada Laravel,
+                routing umumnya ditulis pada file <strong>routes/web.php</strong>. Pada praktikum ini dipelajari
+                beberapa jenis routing, yaitu routing dasar, routing parameter, named route, dan route group.
+              </p>
+              <p>
+                Routing dasar digunakan untuk menampilkan respon sederhana ketika URL tertentu diakses. Routing
+                parameter digunakan untuk menerima nilai dari URL, misalnya ID produk. Named route digunakan
+                untuk memberikan nama pada route agar lebih mudah dipanggil kembali. Sementara itu, route group
+                digunakan untuk mengelompokkan beberapa route yang memiliki prefix atau awalan URL yang sama,
+                seperti halaman admin.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-11.jpeg" alt="Contoh routing dasar pada Laravel">
+                <figcaption>Gambar 11. Contoh routing dasar pada Laravel.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-12.jpeg" alt="Contoh routing parameter pada Laravel">
+                <figcaption>Gambar 12. Contoh routing parameter pada Laravel.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-13.jpeg" alt="Contoh named route pada Laravel">
+                <figcaption>Gambar 13. Contoh named route pada Laravel.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-14.jpeg" alt="Contoh route group pada Laravel">
+                <figcaption>Gambar 14. Contoh route group pada Laravel.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.5 Model</h6>
+              <p>
+                Model digunakan untuk berinteraksi dengan tabel pada database. Pada praktikum ini dibuat model
+                <strong>Product</strong> yang berada pada direktori <strong>app/Models</strong>. Model tersebut
+                mewakili tabel <strong>products</strong> dan memungkinkan aplikasi melakukan operasi database
+                seperti mengambil, menambah, mengubah, dan menghapus data.
+              </p>
+              <p>
+                Pada class <strong>Product</strong>, digunakan trait <strong>HasFactory</strong> dan property
+                <strong>$fillable</strong>. Property <strong>$fillable</strong> berisi daftar kolom yang boleh
+                diisi secara massal, yaitu <strong>name</strong>, <strong>price</strong>, dan
+                <strong>description</strong>. Dengan pengaturan ini, Laravel dapat menjaga keamanan data agar
+                hanya field tertentu yang dapat diproses saat melakukan input data.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-15.jpeg" alt="Struktur folder model Product.php">
+                <figcaption>Gambar 15. Pembuatan model Product.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-16.jpeg" alt="Kode model Product dengan property fillable">
+                <figcaption>Gambar 16. Pengaturan fillable pada model Product.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.6 Controller</h6>
+              <p>
+                Controller digunakan untuk mengatur logika aplikasi dan menjadi penghubung antara model dengan
+                view. Pada praktikum ini dibuat controller bernama <strong>ProductController</strong> menggunakan
+                perintah:
+              </p>
+              <pre><code>php artisan make:controller ProductController</code></pre>
+              <p>
+                Di dalam controller dibuat method <strong>index()</strong>. Method ini mengambil seluruh data
+                produk dari database menggunakan model <strong>Product</strong>, kemudian mengirimkan data
+                tersebut ke halaman view bernama <strong>products</strong>. Dengan cara ini, controller berperan
+                sebagai pusat pengatur alur data dari database menuju halaman web.
+              </p>
+              <p>
+                Route kemudian dihubungkan ke controller agar ketika URL tertentu diakses, method
+                <strong>index()</strong> pada <strong>ProductController</strong> dijalankan. Selain route biasa,
+                juga dipelajari penggunaan <strong>Route::resource</strong> yang dapat memetakan fungsi CRUD
+                secara otomatis ke controller.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-17.jpeg" alt="Perintah membuat ProductController">
+                <figcaption>Gambar 17. Pembuatan controller ProductController.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-18.jpeg" alt="Method index pada ProductController">
+                <figcaption>Gambar 18. Method index untuk mengambil data produk.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-19.jpeg" alt="Route menuju ProductController">
+                <figcaption>Gambar 19. Menghubungkan route ke controller.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-20.jpeg" alt="Controller yang mengambil data products melalui model Product">
+                <figcaption>Gambar 20. Controller dengan model Product.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-21.jpeg" alt="Penggunaan resource route pada products">
+                <figcaption>Gambar 21. Penggunaan resource route pada Laravel.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4.7 View dan Blade Layout</h6>
+              <p>
+                View digunakan untuk menampilkan data kepada pengguna. Laravel menggunakan Blade Template untuk
+                membuat tampilan yang lebih rapi dan mudah digunakan kembali. Pada praktikum ini dibuat file
+                layout utama pada <strong>resources/views/layouts/app.blade.php</strong>. Layout tersebut berisi
+                struktur dasar HTML, bagian judul halaman, serta area konten yang dapat diisi oleh halaman lain.
+              </p>
+              <p>
+                Selanjutnya dibuat file view <strong>products.blade.php</strong> yang menggunakan layout utama
+                tersebut. File ini mengatur judul halaman dengan directive <strong>@section('title')</strong>,
+                kemudian menampilkan daftar produk menggunakan perulangan <strong>@foreach</strong>. Data produk
+                yang dikirim dari controller ditampilkan dalam bentuk daftar sehingga pengguna dapat melihat nama,
+                harga, dan deskripsi produk pada halaman web.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-22.jpeg" alt="Kode layout utama app.blade.php">
+                <figcaption>Gambar 22. Pembuatan layout utama Blade.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-23.jpeg" alt="Kode view products.blade.php yang menggunakan layout Blade">
+                <figcaption>Gambar 23. View products yang menggunakan layout Blade.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>5. Tugas</h6>
+              <p>
+                Pada bagian tugas, dibuat aplikasi sederhana untuk mengelola data mahasiswa. Database baru dibuat
+                dengan nama <strong>db_mahasiswa</strong>, kemudian konfigurasi database pada file
+                <strong>.env</strong> disesuaikan agar Laravel terhubung ke database tersebut.
+              </p>
+              <p>
+                Setelah koneksi database diatur, dibuat model <strong>Mahasiswa</strong> pada direktori
+                <strong>app/Models</strong>. Model ini memiliki property <strong>$fillable</strong> untuk
+                mengizinkan penyimpanan data pada kolom <strong>nim</strong>, <strong>nama</strong>, dan
+                <strong>jurusan</strong>. Selanjutnya dibuat migration untuk tabel <strong>mahasiswas</strong>
+                dengan kolom <strong>id</strong>, <strong>nim</strong>, <strong>nama</strong>,
+                <strong>jurusan</strong>, serta <strong>timestamps</strong>.
+              </p>
+              <p>
+                Setelah migration selesai disusun, perintah <strong>php artisan migrate</strong> dijalankan untuk
+                membuat tabel pada database. Berikutnya dibuat <strong>MahasiswaSeeder</strong> untuk mengisi
+                data awal mahasiswa, lalu seeder tersebut dipanggil melalui <strong>DatabaseSeeder.php</strong>
+                dan dijalankan menggunakan perintah <strong>php artisan migrate --seed</strong>.
+              </p>
+              <p>
+                Untuk mengatur alur aplikasi, file <strong>web.php</strong> ditambahkan route resource yang
+                mengarah ke <strong>MahasiswaController</strong>. Controller tersebut berisi method untuk
+                menampilkan data, menyimpan data baru, mengubah data, dan menghapus data. Selanjutnya dibuat
+                tampilan pada folder <strong>resources/views/mahasiswa</strong>, yaitu halaman
+                <strong>index.blade.php</strong> untuk menampilkan daftar mahasiswa,
+                <strong>create.blade.php</strong> untuk menambah data, dan <strong>edit.blade.php</strong> untuk
+                mengubah data.
+              </p>
+              <p>
+                Hasil akhir dari tugas ini adalah halaman daftar mahasiswa yang menampilkan data dalam bentuk
+                tabel. Pengguna dapat menambah data mahasiswa baru, mengedit data yang sudah ada, dan menghapus
+                data dengan konfirmasi terlebih dahulu. Dengan tugas ini, konsep migration, seeding, routing,
+                model, controller, dan view diterapkan secara lengkap dalam bentuk aplikasi CRUD sederhana.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-24.jpeg" alt="Pembuatan database db_mahasiswa di phpMyAdmin">
+                <figcaption>Gambar 24. Pembuatan database db_mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-25.jpeg" alt="Konfigurasi file .env untuk database db_mahasiswa">
+                <figcaption>Gambar 25. Konfigurasi file .env untuk database db_mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-26.jpeg" alt="Kode model Mahasiswa">
+                <figcaption>Gambar 26. Pembuatan model Mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-27.jpeg" alt="Perintah membuat migration create_mahasiswas_table">
+                <figcaption>Gambar 27. Pembuatan migration tabel mahasiswas.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-28.jpeg" alt="Struktur tabel mahasiswas pada file migration">
+                <figcaption>Gambar 28. Struktur tabel mahasiswas pada migration.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-29.jpeg" alt="Menjalankan migration untuk tabel mahasiswas">
+                <figcaption>Gambar 29. Menjalankan migration untuk tabel mahasiswas.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-30.jpeg" alt="Perintah membuat MahasiswaSeeder">
+                <figcaption>Gambar 30. Pembuatan file MahasiswaSeeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-31.jpeg" alt="Kode MahasiswaSeeder untuk data awal mahasiswa">
+                <figcaption>Gambar 31. Pembuatan data awal pada MahasiswaSeeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-32.jpeg" alt="Pemanggilan MahasiswaSeeder pada DatabaseSeeder">
+                <figcaption>Gambar 32. Pemanggilan MahasiswaSeeder pada DatabaseSeeder.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-33.jpeg" alt="Menjalankan php artisan migrate --seed">
+                <figcaption>Gambar 33. Menjalankan seeder melalui perintah migrate --seed.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-34.jpeg" alt="Route resource untuk halaman mahasiswa">
+                <figcaption>Gambar 34. Route resource untuk halaman mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-35.jpeg" alt="Kode MahasiswaController untuk CRUD mahasiswa">
+                <figcaption>Gambar 35. Controller CRUD untuk data mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-36.jpeg" alt="Kode index.blade.php untuk daftar mahasiswa">
+                <figcaption>Gambar 36. View index untuk menampilkan daftar mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-37.jpeg" alt="Kode create.blade.php untuk tambah mahasiswa">
+                <figcaption>Gambar 37. View create untuk menambah data mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-38.jpeg" alt="Kode edit.blade.php untuk mengubah data mahasiswa">
+                <figcaption>Gambar 38. View edit untuk mengubah data mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-39.jpeg" alt="Output awal daftar mahasiswa">
+                <figcaption>Gambar 39. Output awal daftar mahasiswa.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-40.jpeg" alt="Form tambah mahasiswa baru">
+                <figcaption>Gambar 40. Tampilan form tambah mahasiswa baru.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-41.jpeg" alt="Output daftar mahasiswa setelah data baru ditambahkan">
+                <figcaption>Gambar 41. Output daftar mahasiswa setelah penambahan data.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-pw-migration-42.jpeg" alt="Konfirmasi hapus data mahasiswa">
+                <figcaption>Gambar 42. Konfirmasi sebelum menghapus data mahasiswa.</figcaption>
+              </figure>
+            </section>
+          </article>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="laprakModalNew" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title">Pengenalan Widgets Stateless, Stateful, & Manajemen State Dasar</h5>
+            <p class="small text-muted mb-0">Pertemuan 2 - Praktikum Aplikasi Mobile</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="badge text-bg-primary mb-3">Aplikasi Mobile</span>
+
+          <article class="laprak-report">
+            <section>
+              <h6>1. Pendahuluan</h6>
+              <p>
+                Flutter menggunakan widget sebagai komponen utama dalam membangun tampilan aplikasi. Oleh karena itu, pemahaman mengenai jenis widget, pengaturan layout, styling, dan pengelolaan state menjadi dasar penting dalam pengembangan aplikasi Flutter. Pada praktikum ini dilakukan penerapan StatelessWidget, StatefulWidget, dan setState() melalui pembuatan dashboard sederhana. Selain itu, digunakan Row, Column, ListTile, dan SingleChildScrollView untuk mengatur tampilan tombol aksi dan daftar transaksi. Praktikum juga mencakup modifikasi warna, penambahan nomor rekening, serta penambahan dan pengaturan tampilan transaksi.
+              </p>
+            </section>
+
+            <section>
+              <h6>2. Tujuan</h6>
+              <p>Praktikum ini bertujuan untuk:</p>
+              <ul>
+                <li>Memahami kerangka dasar aplikasi Flutter (MaterialApp & Scaffold).</li>
+                <li>Membedakan penggunaan StatelessWidget dan StatefulWidget.</li>
+                <li>Menerapkan fungsi setState() untuk UI interaktif.</li>
+                <li>Menerapkan widget Row untuk deretan tombol aksi.</li>
+                <li>Menerapkan widget Column untuk daftar transaksi.</li>
+                <li>Mengatur padding, margin, dan warna Container.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h6>3. Langkah Praktikum</h6>
+              <h6 class="mt-4">Modul 1: Pengenalan Widgets Stateless, Stateful & Manajemen State Dasar</h6>
+              
+              <h6 class="mt-3">3.1 Membuat Widget Sapaan (Stateless)</h6>
+              <p>
+                Pada kode program ini, kita akan menempatkan kedua buah teks seperti pada kode program di bagian atas dengan menggunakan Row untuk menyusun elemen dari kiri ke kanan, dan menggunakan Column untuk menumpuk teks 1 dan 2.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/1.png" alt="Membuat Widget Sapaan (Stateless)">
+                <figcaption>Gambar 1. Membuat Widget Sapaan (Stateless).</figcaption>
+              </figure>
+
+              <h6 class="mt-3">3.2 Membuat Card Saldo (Stateful)</h6>
+              <p>
+                Pada kode program ini, kita menggunakan StatefulWidget agar card bisa bereaksi saat ikon mata ditekan. Selain StatefulWidget, kita juga mengunakan variabel _isObscure untuk menyimpan status sensor dan variabel _balance untuk menyimpan nilai nominal.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/2.png" alt="Membuat Card Saldo (Stateful)">
+                <figcaption>Gambar 2. Membuat Card Saldo (Stateful).</figcaption>
+              </figure>
+
+              <h6 class="mt-3">3.3 Menerapkan Interaktivitas (setState)</h6>
+              <p>
+                Pada bagian kode program ini, kita menggunakan setState() untuk membeti tahu bahwa ada perubahan data, sehingga UI dirender ulang.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/3.png" alt="Menerapkan Interaktivitas (setState)">
+                <figcaption>Gambar 3. Menerapkan Interaktivitas (setState).</figcaption>
+              </figure>
+
+              <h6 class="mt-3">3.4 Hasil Akhir</h6>
+              <p>Berikut hasil akhir ketika program dijalankan.</p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/4.png" alt="Hasil akhir program dijalankan">
+                <figcaption>Gambar 4. Hasil akhir program dijalankan.</figcaption>
+              </figure>
+              <p>Berikut ketika ikon mata ditekan sehinga menyembunyikan nominal saldo</p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/5.png" alt="Nominal saldo disembunyikan">
+                <figcaption>Gambar 5. Nominal saldo disembunyikan.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>4. Latihan</h6>
+              
+              <h6 class="mt-3">4.1 Styling: Ubah warna tema BalanceCard dari biru (Colors.blueAccent) menjadi hijau emerald (Colors.teal).</h6>
+              <p>
+                Ganti setiap kode program yang sebelumnya menggunakan warna (Colors.blueAccent) menjadi (Colors.teal) atau hijau teal.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/6.png" alt="Mengubah warna dari biru ke teal">
+                <figcaption>Gambar 6. Mengubah warna dari biru ke teal.</figcaption>
+              </figure>
+
+              <h6 class="mt-3">4.2 Modifikasi UI: Tambahkan teks statis berupa "No. Rekening: 1234-5678" di bagian bawah nominal saldo di dalam card.</h6>
+              <p>
+                Tambahkan kode program tersebut pada bagian bawah kode tampilan saldo dan sensor. Pada kode program dapat kita lihat jika terdapat syntax fontSize yang bertujuan untuk mengatur ukuran font yang digunakan pada teks (No. rekening: 1234-5678) dan juga color untuk mengatur warna yang digunakan pada teks tersebut.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/7.png" alt="Menambahkan nomor rekening">
+                <figcaption>Gambar 7. Menambahkan nomor rekening.</figcaption>
+              </figure>
+
+              <h6 class="mt-3">4.3 Hasil Akhir</h6>
+              <p>Berikut hasil akhir ketika kode program dijalankan, dapat kita lihat jika warna telah diubah dan teks statis telah ditambahkan.</p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/8.png" alt="Hasil akhir latihan dengan warna teal dan nomor rekening">
+                <figcaption>Gambar 8. Hasil akhir latihan dengan warna teal dan nomor rekening.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>5. Modul 2: Layouting & Styling Row, Column, Container, dan ListTile</h6>
+              
+              <h6 class="mt-3">5.1 Menyusun Tombol Aksi (Row)</h6>
+              <p>
+                Pada bagian ini, kita menggunakan Row untuk meletakkan tombol Pemasukan, Pengeluaran, dan Transfer sejajar secara horizontal. Selain itu, kita juga menggunakan mainAxisAlignment untuk mengatur jarak antar elemen, dan juga spaceEvenly untuk membagi ruang kosong sama rata.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/9.png" alt="Menyusun Tombol Aksi (Row)">
+                <figcaption>Gambar 9. Menyusun Tombol Aksi (Row).</figcaption>
+              </figure>
+
+              <h6 class="mt-3">5.2 Menyusun Riwayat (Column + ListTile)</h6>
+              <p>
+                Pada bagian kode program ini, kita wajib menggunakan Column untuk mengurut daftar transaksi ke bawah. Langkahnya terdiri dari menumpuk teks judul dan daftar menggunakan Column, lalu menggunakan banyak listTile berturut-turut.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/10.png" alt="Menyusun Riwayat (Column + ListTile)">
+                <figcaption>Gambar 10. Menyusun Riwayat (Column + ListTile).</figcaption>
+              </figure>
+
+              <h6 class="mt-3">5.3 Integrasi Dashboard (Scrollable)</h6>
+              <p>
+                Pada kode program ini, kita menggabungkan komponen dari modul 1 dan modul 2, lalu membungkus keduanya dengan menggunakan SingleChildScrollView agar layer yang ada tidak overflow saat daftar memanjang.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/11.png" alt="Integrasi Dashboard (Scrollable)">
+                <figcaption>Gambar 11. Integrasi Dashboard (Scrollable).</figcaption>
+              </figure>
+
+              <h6 class="mt-3">5.4 Hasil Akhir: Mockup Dashboard</h6>
+              <p>Berikut merupakan hasil ketika kode program yang sudah dibuat dijalankan.</p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/12.png" alt="Mockup Dashboard bagian atas">
+                <figcaption>Gambar 12. Mockup Dashboard bagian atas.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/13.png" alt="Mockup Dashboard bagian bawah">
+                <figcaption>Gambar 13. Mockup Dashboard bagian bawah.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>6. Latihan Modul 2</h6>
+              
+              <h6 class="mt-3">6.1 Styling: Pada widget Daftar Transaksi (ListTile), ubah warna trailing text pengeluaran menjadi merah dan text pemasukan menjadi hijau.</h6>
+              <p>
+                Pada bagian ini, kita harus mengubah semua color trailing pada bagian ListTile dengan ketentuan jika transaksi pengeluaran, trailing teks akan berwarna merah, dan jika transaksi pemasukan, maka trailing teks berwarna hijau. Contoh pada gambar, kita mengambil satu transaksi (Gaji Bulanan), yang mana pada transaksi ini dapat kita ketahui bahwa ini merupakan transaksi pemasukan dengan ditandai dengan tanda "+" pada awal nominal pemasukan. Pada teks ini kita ubah warna pada trailing teks nya menjadi hijau, lakukan juga pada 2 data transaksi lainnya.
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/14.png" alt="Mengubah warna trailing text">
+                <figcaption>Gambar 14. Mengubah warna trailing text.</figcaption>
+              </figure>
+
+              <h6 class="mt-3">6.2 Tambah Data: Tambahkan 2 transaksi fiktif baru ke dalam daftar "Transaksi Terakhir" di bawah kode yang sudah ada.</h6>
+              <p>
+                Pada latihan ini, saya menambahkan 2 transaksi fiktif yaitu, Belanja Kebutuhan Bulanan (Pengeluaran) dan Jual Sertifikat Tanah (Pemasukan).
+              </p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/15.png" alt="Menambahkan 2 transaksi fiktif">
+                <figcaption>Gambar 15. Menambahkan 2 transaksi fiktif.</figcaption>
+              </figure>
+
+              <h6 class="mt-3">6.3 Hasil Akhir</h6>
+              <p>Berikut hasil akhir setelah latihan dikerjakan dan kode program dijalankan.</p>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/16.png" alt="Hasil akhir latihan modul 2 bagian atas">
+                <figcaption>Gambar 16. Hasil akhir latihan modul 2 bagian atas.</figcaption>
+              </figure>
+              <figure class="laprak-figure">
+                <img src="images/laprak-widget-stateless-stateful/17.png" alt="Hasil akhir latihan modul 2 bagian bawah">
+                <figcaption>Gambar 17. Hasil akhir latihan modul 2 bagian bawah.</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h6>7. Kesimpulan</h6>
+              <p>
+                Berdasarkan praktikum yang telah dilakukan, dapat disimpulkan bahwa widget merupakan bagian penting dalam membangun antarmuka Flutter. Praktikum memberikan pemahaman mengenai penggunaan StatelessWidget dan StatefulWidget, serta penerapan setState() untuk membuat tampilan yang dapat merespons interaksi pengguna, seperti fitur menampilkan dan menyembunyikan saldo. Selain itu, penggunaan Row, Column, dan ListTile membantu dalam menyusun tampilan dashboard dan daftar transaksi. Melalui latihan, tampilan juga berhasil dimodifikasi dengan perubahan warna, penambahan nomor rekening, serta penambahan transaksi pemasukan dan pengeluaran.
+              </p>
+            </section>
+          </article>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="laprakModalFlutter" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title">Widget Input dan Validasi Form pada Flutter</h5>
+            <p class="small text-muted mb-0">Praktikum Aplikasi Mobile</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span class="badge text-bg-primary mb-3">Aplikasi Mobile</span>
+
+          <article class="laprak-report">
+            <section>
+              <h6>1. Pendahuluan</h6>
+              <p>
+                Flutter merupakan salah satu framework modern yang digunakan untuk mengembangkan aplikasi mobile.
+                Framework ini menyediakan berbagai macam widget yang dapat digunakan untuk membuat antarmuka pengguna
+                yang dinamis dan responsif. Dalam pengembangan aplikasi, salah satu hal yang penting adalah bagaimana
+                aplikasi dapat menerima, mengelola, serta melakukan validasi terhadap input yang diberikan oleh
+                pengguna. Untuk kebutuhan input teks, Flutter menyediakan dua widget yang umum digunakan, yaitu
+                TextField dan TextFormField. TextField merupakan widget dasar yang memiliki fleksibilitas dalam
+                mengatur tampilan maupun perilakunya, sehingga cocok digunakan pada kebutuhan sederhana seperti fitur
+                pencarian atau input teks tunggal. Sementara itu, TextFormField memiliki fitur yang lebih lengkap
+                karena dapat digunakan bersama widget Form dan mendukung proses validasi melalui properti validator,
+                sehingga aturan validasi dapat ditentukan secara langsung dan pesan kesalahan dapat ditampilkan
+                ketika input yang diberikan tidak sesuai.
+              </p>
+              <p>
+                Pada praktikum ini, kedua widget tersebut diimplementasikan untuk memahami karakteristik serta
+                penggunaan masing-masing widget. Implementasi pertama dilakukan dengan membuat formulir sederhana
+                menggunakan TextField dan TextEditingController untuk menerima serta mengelola input pengguna,
+                kemudian memberikan informasi atau umpan balik melalui SnackBar. Selanjutnya, dilakukan pembuatan
+                formulir menggunakan TextFormField yang dilengkapi dengan proses validasi. Pada bagian ini,
+                GlobalKey digunakan untuk membantu memastikan bahwa data yang dimasukkan telah memenuhi aturan yang
+                ditentukan. Selain membahas widget input, praktikum juga mencakup beberapa konsep pendukung, seperti
+                penggunaan StatefulWidget dalam mengelola state, penerapan metode dispose() untuk membersihkan
+                resource agar tidak terjadi kebocoran memori, serta penggunaan kata kunci const sebagai salah satu
+                upaya optimasi kinerja aplikasi. Melalui praktikum ini, diharapkan dapat diperoleh pemahaman
+                mengenai penggunaan widget input pada Flutter, pengelolaan state dan controller, proses validasi
+                input, serta penerapan praktik yang tepat dalam membuat formulir yang mudah digunakan dan memiliki
+                kinerja yang baik.
+              </p>
+            </section>
+
+            <section>
+              <h6>2. Tujuan</h6>
+              <ul>
+                <li>Memahami konsep dasar serta perbedaan antara widget TextField dan TextFormField, kemudian mampu menerapkannya dalam pembuatan formulir sederhana pada Flutter untuk menerima dan mengelola input dari pengguna.</li>
+                <li>Mampu menggunakan TextEditingController untuk mengatur nilai masukan, memanfaatkan GlobalKey dalam pengelolaan state formulir secara menyeluruh, serta mengimplementasikan metode validator untuk memvalidasi data berdasarkan aturan tertentu, seperti kolom yang wajib diisi dan format email yang benar.</li>
+                <li>Memahami serta menerapkan metode lifecycle dispose() untuk membersihkan resource sehingga dapat mencegah terjadinya kebocoran memori, sekaligus menggunakan setState() untuk memperbarui tampilan widget ketika terjadi perubahan pada state.</li>
+                <li>Mampu memberikan umpan balik kepada pengguna melalui SnackBar dan menerapkan praktik yang baik dalam pengembangan formulir agar mudah digunakan, memiliki performa yang optimal, serta sesuai dengan prinsip clean code.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h6>3. Langkah Pengerjaan</h6>
+              <p>
+                Langkah pengerjaan terbagi menjadi dua bagian. Bagian pertama adalah praktikum, yang terdiri dari
+                implementasi basic form menggunakan TextField dan implementasi form validation menggunakan
+                TextFormField. Bagian kedua adalah tugas berupa pembuatan aplikasi kalkulator Kabataku. Setiap
+                tahapan disertai screenshot potongan kode dan hasil tampilan aplikasi.
+              </p>
+            </section>
+
+            <section>
+              <h6>3.1 Praktikum: Implementasi Basic Form dengan TextField (form-textfield.dart)</h6>
+              <ol>
+                <li>
+                  Membuat file baru bernama form-textfield.dart di dalam folder lib. Selanjutnya, melakukan import
+                  package Flutter Material Design yang menyediakan berbagai widget dasar untuk membangun antarmuka
+                  aplikasi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-1.png" alt="Membuat file form-textfield.dart dan import package Material">
+                    <figcaption>Gambar 1. Membuat file form-textfield.dart dan import package Material.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat class MyApp sebagai widget utama dengan menggunakan StatelessWidget, karena pada bagian
+                  ini tidak terdapat perubahan state. Class tersebut akan mengembalikan MaterialApp yang di dalamnya
+                  terdapat Scaffold dengan komponen AppBar dan body.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-2.png" alt="Class MyApp sebagai widget utama dengan MaterialApp dan Scaffold">
+                    <figcaption>Gambar 2. Class MyApp sebagai widget utama dengan MaterialApp dan Scaffold.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat class MyForm yang merupakan turunan dari StatefulWidget karena formulir akan mengelola
+                  state berupa input teks dari pengguna. Penggunaan StatefulWidget membutuhkan class State terpisah
+                  yang bertugas mengatur state dan logika dari formulir tersebut.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-3.png" alt="Class MyForm sebagai turunan StatefulWidget">
+                    <figcaption>Gambar 3. Class MyForm sebagai turunan StatefulWidget.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Pada class _MyFormState, mendeklarasikan variabel _textEditingController yang digunakan sebagai
+                  controller untuk mengambil dan mengelola nilai yang dimasukkan melalui TextField. Controller ini
+                  berperan penting dalam memperoleh data input dari pengguna.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-4.png" alt="Deklarasi _textEditingController pada class _MyFormState">
+                    <figcaption>Gambar 4. Deklarasi _textEditingController pada class _MyFormState.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Melakukan override pada method dispose() untuk membersihkan textEditingController ketika widget
+                  sudah tidak digunakan atau dihapus dari widget tree. Langkah ini diperlukan untuk mencegah
+                  terjadinya memory leak, karena controller perlu dihentikan secara manual.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-5.png" alt="Override method dispose() untuk membersihkan controller">
+                    <figcaption>Gambar 5. Override method dispose() untuk membersihkan controller.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Pada method build(), membuat struktur tampilan menggunakan Padding untuk memberikan jarak antara
+                  konten dengan tepi layar. Kemudian menggunakan Column untuk menyusun beberapa widget secara
+                  vertikal dengan crossAxisAlignment.start agar seluruh konten berada dalam posisi rata kiri.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-6.png" alt="Struktur build() dengan Padding dan Column">
+                    <figcaption>Gambar 6. Struktur build() dengan Padding dan Column.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Menambahkan widget Text yang berfungsi sebagai label atau instruksi bagi pengguna. Setelahnya,
+                  menambahkan SizedBox untuk memberikan jarak vertikal sebesar 10 pixel sebelum komponen TextField.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-7.png" alt="Widget Text sebagai label dan SizedBox sebagai jarak vertikal">
+                    <figcaption>Gambar 7. Widget Text sebagai label dan SizedBox sebagai jarak vertikal.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat widget TextField dan mengatur beberapa properti decoration agar tampilannya lebih
+                  informatif. InputDecoration digunakan dengan beberapa properti, yaitu labelText sebagai label,
+                  hintText sebagai placeholder, border: OutlineInputBorder() untuk memberikan bentuk border kotak,
+                  serta prefixIcon untuk menampilkan ikon pada bagian kiri input.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-8.png" alt="Widget TextField dengan pengaturan InputDecoration">
+                    <figcaption>Gambar 8. Widget TextField dengan pengaturan InputDecoration.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Pada TextField tersebut, menambahkan properti controller yang dihubungkan dengan
+                  _textEditingController. Selain itu, menggunakan keyboardType untuk menentukan jenis keyboard yang
+                  ditampilkan, yaitu tipe text, serta onChanged sebagai event listener yang akan dijalankan setiap
+                  kali terjadi perubahan pada input.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-9.png" alt="Properti controller, keyboardType, dan onChanged pada TextField">
+                    <figcaption>Gambar 9. Properti controller, keyboardType, dan onChanged pada TextField.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Menambahkan kembali SizedBox dengan nilai height 20 untuk memberikan jarak antara TextField dengan
+                  tombol yang akan dibuat setelahnya.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-10.png" alt="SizedBox sebagai jarak antara TextField dan tombol">
+                    <figcaption>Gambar 10. SizedBox sebagai jarak antara TextField dan tombol.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat ElevatedButton dengan method onPressed yang berfungsi mengambil nilai input dari controller
+                  dan menampilkannya melalui SnackBar. Tombol tersebut juga diberikan pengaturan tampilan menggunakan
+                  styleFrom, dengan warna latar amber dan warna teks hitam.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-11.png" alt="ElevatedButton dengan aksi menampilkan SnackBar">
+                    <figcaption>Gambar 11. ElevatedButton dengan aksi menampilkan SnackBar.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Setelah seluruh kode selesai dibuat, menjalankan program untuk melihat hasil implementasinya.
+                  Tampilan aplikasi yang dihasilkan dapat dilihat pada gambar berikut.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-12.png" alt="Tampilan aplikasi basic form dengan TextField">
+                    <figcaption>Gambar 12. Tampilan aplikasi basic form dengan TextField.</figcaption>
+                  </figure>
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <h6>3.2 Praktikum: Implementasi Form Validation dengan TextFormField (form-textformfield.dart)</h6>
+              <ol>
+                <li>
+                  Seperti pada file sebelumnya, mengimpor package Material dan membuat fungsi main() sebagai fungsi
+                  utama untuk menjalankan aplikasi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-13.png" alt="Import package Material dan fungsi main() pada form-textformfield.dart">
+                    <figcaption>Gambar 13. Import package Material dan fungsi main() pada form-textformfield.dart.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat class MyApp sebagai widget utama. Pada bagian AppBar, menggunakan judul "Basic Form
+                  TextFormField" agar dapat membedakan implementasi ini dengan penggunaan TextField sebelumnya.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-14.png" alt="Class MyApp dengan judul &quot;Basic Form TextFormField&quot;">
+                    <figcaption>Gambar 14. Class MyApp dengan judul "Basic Form TextFormField".</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat class MyFormText yang merupakan turunan dari StatefulWidget karena formulir yang dibuat
+                  akan mengelola state serta memiliki proses validasi terhadap input pengguna.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-15.png" alt="Class MyFormText sebagai turunan StatefulWidget">
+                    <figcaption>Gambar 15. Class MyFormText sebagai turunan StatefulWidget.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Pada class _MyFormTextState, mendeklarasikan _formKey dengan tipe GlobalKey&lt;FormState&gt;.
+                  Variabel ini digunakan untuk mengakses state dari widget Form dan menjalankan proses validasi.
+                  Selain itu, membuat dua controller yang digunakan untuk mengelola input pada field nama dan email.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-16.png" alt="Deklarasi _formKey dan controller nama serta email">
+                    <figcaption>Gambar 16. Deklarasi _formKey dan controller nama serta email.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Melakukan override pada method dispose() untuk membersihkan kedua controller, yaitu controller
+                  nama dan email, ketika widget sudah dihapus dari widget tree. Hal ini dilakukan agar resource yang
+                  digunakan dapat dilepaskan dengan baik.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-17.png" alt="Override dispose() untuk membersihkan kedua controller">
+                    <figcaption>Gambar 17. Override dispose() untuk membersihkan kedua controller.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat method _submitForm() yang akan dijalankan ketika tombol submit ditekan. Di dalam method
+                  tersebut, menggunakan _formKey.currentState!.validate() untuk menjalankan validasi pada seluruh
+                  TextFormField yang terdapat dalam Form. Jika proses validasi berhasil dan menghasilkan nilai true,
+                  maka nilai dari kedua controller akan diambil dan ditampilkan kepada pengguna melalui SnackBar.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-18.png" alt="Method _submitForm() dengan proses validasi form">
+                    <figcaption>Gambar 18. Method _submitForm() dengan proses validasi form.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Pada method build(), membungkus layout menggunakan widget Form dan menghubungkannya dengan
+                  _formKey melalui properti key. Di dalam Form tersebut digunakan Padding dan Column untuk mengatur
+                  tata letak komponen formulir.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-19.png" alt="Widget Form yang terhubung dengan _formKey">
+                    <figcaption>Gambar 19. Widget Form yang terhubung dengan _formKey.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat TextFormField pertama yang digunakan sebagai input nama dengan menghubungkannya ke
+                  _nameController serta memberikan pengaturan decoration yang sesuai. Perbedaan utama dengan
+                  TextField sebelumnya adalah adanya properti validator yang digunakan untuk melakukan pemeriksaan
+                  terhadap input. Validator menerima nilai input sebagai parameter dan mengembalikan String apabila
+                  terdapat kesalahan atau null apabila input dinyatakan valid.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-20.png" alt="TextFormField nama dengan properti validator">
+                    <figcaption>Gambar 20. TextFormField nama dengan properti validator.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Menambahkan SizedBox untuk memberikan jarak antara TextFormField pertama dengan field berikutnya
+                  sehingga tampilan formulir menjadi lebih rapi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-21.png" alt="SizedBox sebagai jarak antar field">
+                    <figcaption>Gambar 21. SizedBox sebagai jarak antar field.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat TextFormField kedua untuk menerima input email menggunakan _emailController. Pada bagian
+                  validator, dilakukan pemeriksaan terhadap dua kondisi, yaitu memastikan field tidak kosong dan
+                  memeriksa apakah format email yang dimasukkan valid, salah satunya dengan memastikan terdapat
+                  karakter '@'.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-22.png" alt="TextFormField email dengan validasi format email">
+                    <figcaption>Gambar 22. TextFormField email dengan validasi format email.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Menambahkan SizedBox kembali untuk memberikan jarak antara TextFormField dengan tombol submit.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-23.png" alt="SizedBox sebagai jarak menuju tombol submit">
+                    <figcaption>Gambar 23. SizedBox sebagai jarak menuju tombol submit.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat SizedBox dengan properti width: double.infinity agar tombol memiliki lebar yang mengikuti
+                  ukuran layar. Di dalam SizedBox tersebut, menambahkan ElevatedButton yang memiliki properti
+                  onPressed untuk memanggil method _submitForm() ketika tombol ditekan.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-24.png" alt="ElevatedButton submit dengan lebar penuh layar">
+                    <figcaption>Gambar 24. ElevatedButton submit dengan lebar penuh layar.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Setelah seluruh implementasi selesai, menjalankan aplikasi untuk melihat hasil dari formulir yang
+                  telah dibuat.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-25.png" alt="Tampilan aplikasi form validation dengan TextFormField">
+                    <figcaption>Gambar 25. Tampilan aplikasi form validation dengan TextFormField.</figcaption>
+                  </figure>
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <h6>3.3 Tugas: Aplikasi Kalkulator Kabataku (main.dart)</h6>
+              <p>
+                Pada bagian tugas, dibuat aplikasi kalkulator sederhana bernama Kabataku menggunakan framework
+                Flutter. Aplikasi ini mengimplementasikan empat operasi matematika dasar, yaitu perkalian (kali),
+                pembagian (bagi), penjumlahan (tambah), dan pengurangan (kurang). Aplikasi menampilkan dua TextField
+                sebagai input angka, empat tombol operasi dengan warna berbeda, serta container untuk menampilkan
+                hasil perhitungan.
+              </p>
+              <ol>
+                <li>
+                  Melakukan import package dan setup awal aplikasi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-26.png" alt="Import package dan setup awal aplikasi">
+                    <figcaption>Gambar 26. Import package dan setup awal aplikasi.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat widget utama (MyApp).
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-27.png" alt="Widget utama MyApp">
+                    <figcaption>Gambar 27. Widget utama MyApp.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat halaman kalkulator (KalkulatorPage).
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-28.png" alt="Halaman kalkulator (KalkulatorPage)">
+                    <figcaption>Gambar 28. Halaman kalkulator (KalkulatorPage).</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat state management dan controller.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-29.png" alt="State management dan controller">
+                    <figcaption>Gambar 29. State management dan controller.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat fungsi perhitungan (kali, bagi, tambah, kurang).
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-30.png" alt="Fungsi perhitungan kali, bagi, tambah, dan kurang">
+                    <figcaption>Gambar 30. Fungsi perhitungan kali, bagi, tambah, dan kurang.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat UI input fields.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-31.png" alt="UI input fields">
+                    <figcaption>Gambar 31. UI input fields.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat tombol operasi (4 tombol).
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-32.png" alt="Empat tombol operasi">
+                    <figcaption>Gambar 32. Empat tombol operasi.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat display hasil.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-33.png" alt="Display hasil perhitungan">
+                    <figcaption>Gambar 33. Display hasil perhitungan.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat header aplikasi dengan icon dan deskripsi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-34.png" alt="Header aplikasi dengan icon dan deskripsi">
+                    <figcaption>Gambar 34. Header aplikasi dengan icon dan deskripsi.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat dua TextField untuk input angka.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-35.png" alt="Dua TextField untuk input angka">
+                    <figcaption>Gambar 35. Dua TextField untuk input angka.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat grid 2x2 untuk 4 tombol operasi.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-36.png" alt="Grid 2x2 untuk empat tombol operasi">
+                    <figcaption>Gambar 36. Grid 2x2 untuk empat tombol operasi.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Membuat container untuk menampilkan hasil.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-37.png" alt="Container untuk menampilkan hasil">
+                    <figcaption>Gambar 37. Container untuk menampilkan hasil.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Melakukan dispose controller saat widget dihancurkan.
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-38.png" alt="Dispose controller saat widget dihancurkan">
+                    <figcaption>Gambar 38. Dispose controller saat widget dihancurkan.</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  Melakukan demonstrasi hasil aplikasi yang dijalankan melalui website (Flutter web).
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-39.png" alt="Demonstrasi tampilan awal aplikasi">
+                    <figcaption>Gambar 39. Demonstrasi tampilan awal aplikasi.</figcaption>
+                  </figure>
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-40.png" alt="Hasil operasi kali">
+                    <figcaption>Gambar 40. Hasil operasi kali.</figcaption>
+                  </figure>
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-41.png" alt="Hasil operasi bagi">
+                    <figcaption>Gambar 41. Hasil operasi bagi.</figcaption>
+                  </figure>
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-42.png" alt="Hasil operasi tambah">
+                    <figcaption>Gambar 42. Hasil operasi tambah.</figcaption>
+                  </figure>
+                  <figure class="laprak-figure">
+                    <img src="images/laprak-am-43.png" alt="Hasil operasi kurang">
+                    <figcaption>Gambar 43. Hasil operasi kurang.</figcaption>
+                  </figure>
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <h6>4. Kesimpulan</h6>
+              <p>
+                Berdasarkan praktikum yang telah dilaksanakan, aplikasi Kalkulator Kabataku berhasil dibuat
+                menggunakan framework Flutter dengan bahasa pemrograman Dart. Aplikasi ini mengimplementasikan empat
+                operasi matematika dasar, yaitu perkalian (kali), pembagian (bagi), penjumlahan (tambah), dan
+                pengurangan (kurang) yang disingkat menjadi "Kabataku". Dalam pengembangannya, aplikasi ini
+                memanfaatkan konsep State Management melalui StatefulWidget untuk mengelola perubahan data secara
+                dinamis, serta menggunakan TextEditingController untuk mengontrol input pengguna pada TextField.
+                Aplikasi dirancang dengan antarmuka yang intuitif dan user-friendly, menampilkan dua TextField
+                sebagai input angka pertama dan kedua, empat tombol operasi yang dibedakan dengan warna berbeda
+                (kuning untuk perkalian, hijau untuk pembagian, biru untuk penjumlahan, dan merah untuk pengurangan)
+                dalam layout GridView 2x2, serta hasil perhitungan ditampilkan dalam container dengan format yang
+                jelas, misalnya "10 + 5 = 15".
+              </p>
+              <p>
+                Dari segi fungsionalitas, aplikasi dilengkapi dengan berbagai validasi input untuk meningkatkan user
+                experience dan mencegah error, antara lain validasi input kosong, validasi format angka menggunakan
+                FilteringTextInputFormatter yang membatasi input hanya berupa angka dan titik desimal, serta
+                validasi khusus untuk operasi pembagian yang mencegah pembagian dengan angka nol. Selain itu,
+                aplikasi juga menyediakan fitur reset melalui tombol refresh pada AppBar yang memungkinkan pengguna
+                menghapus semua input dan hasil perhitungan sekaligus.
+              </p>
+              <p>
+                Secara keseluruhan, aplikasi Kalkulator Kabataku telah memenuhi seluruh requirement yang ditetapkan
+                dalam tugas praktikum, yaitu penggunaan dua widget input (TextField) untuk menerima nilai inputan,
+                implementasi ElevatedButton untuk mengeksekusi operasi perhitungan, serta penggunaan widget Text
+                untuk menampilkan hasil operasi. Aplikasi ini juga menunjukkan penerapan prinsip-prinsip dasar
+                pemrograman Flutter seperti widget tree, state management, event handling, serta styling dan theming
+                menggunakan Material Design 3. Dengan demikian, praktikum ini memberikan pemahaman yang komprehensif
+                mengenai pengembangan aplikasi mobile menggunakan Flutter, khususnya dalam membuat aplikasi
+                kalkulator sederhana dengan multiple operations dan validasi input yang robust.
+              </p>
+            </section>
+          </article>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light pt-5">
+    <div class="container pb-4 border-bottom border-secondary">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Tentang</h6>
+          <p class="small text-white-50 mb-0">
+            Fadil Web adalah layanan pembuatan website, aplikasi, dan solusi digital.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1"><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+            <li class="mb-1"><a href="about.html" class="text-decoration-none text-light">About</a></li>
+            <li class="mb-1"><a href="portfolio.html" class="text-decoration-none text-light">Portfolio</a></li>
+            <li class="mb-1"><a href="laprak.html" class="text-decoration-none text-light">Laprak</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center text-md-start">
+          <h6 class="fw-bold mb-3">Follow Me</h6>
+          <a href="https://wa.me/6282311488810" target="_blank" class="text-light fs-4 me-2 text-decoration-none">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="https://facebook.com/profile.php?id=100040110443069" target="_blank" class="text-light fs-4 me-2 text-decoration-none">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/fadilasril_20" target="_blank" class="text-light fs-4 text-decoration-none">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3">
+      <p class="small mb-0">&copy; 2025 | Fadil Insanus Siddik</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.laprak-filter').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.laprak-filter').forEach(item => item.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.laprak-item').forEach(item => {
+          if (filter === 'all' || item.dataset.course === filter) {
+            item.classList.remove('d-none');
+          } else {
+            item.classList.add('d-none');
+          }
+        });
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
