@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Input Widgets & Forms - Fadil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logowebsitetr.png">
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="images/logowebsitetr.png" alt="Logo" class="me-2" style="height: 28px;">
+        <span>Fadil Web<span class="text-primary">.</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain5">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain5">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="laprak.html">Laprak</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mt-5 pt-5">
+    <section class="py-5">
+      <div class="container">
+        <div class="mb-4">
+          <a href="laprak.html" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-arrow-left me-1"></i> Kembali ke Daftar Laprak
+          </a>
+        </div>
+        <div class="card border-0 shadow-sm">
+          <div class="card-header bg-primary text-white">
+            <h4 class="mb-1">Input Widgets & Forms</h4>
+            <p class="small mb-0">Menangkap Data, Dropdown, dan Validasi</p>
+          </div>
+          <div class="card-body">
+<span class="badge text-bg-primary mb-3">Aplikasi Mobile</span>
+
+          <article class="laprak-report">
+            <section>
+              <h5>Pendahuluan</h5>
+              <p>
+                Aplikasi mobile telah menjadi bagian penting dalam kehidupan sehari-hari karena dapat membantu pengguna dalam melakukan berbagai aktivitas secara lebih praktis. Dalam pengembangan aplikasi mobile, salah satu hal yang perlu diperhatikan adalah bagaimana aplikasi dapat menerima dan mengolah input dari pengguna. Input menjadi salah satu dasar dalam interaksi antara pengguna dengan aplikasi, sehingga pemilihan dan penggunaan widget input yang sesuai sangat berpengaruh terhadap kemudahan penggunaan serta kualitas aplikasi yang dikembangkan.
+              </p>
+              <p>
+                Flutter merupakan framework open-source yang dikembangkan oleh Google untuk membangun aplikasi mobile pada berbagai platform dengan performa yang baik. Flutter menyediakan berbagai widget bawaan yang dapat digunakan untuk membuat tampilan form dan menerima input dari pengguna. Pada praktikum ini, pembahasan berfokus pada penggunaan Input Widgets dan Forms di Flutter, khususnya penggunaan TextFormField, DropdownButtonFormField, serta penerapan validasi input. Validasi tersebut digunakan untuk memastikan data yang dimasukkan oleh pengguna sesuai dengan format dan ketentuan yang telah ditentukan.
+              </p>
+              <p>
+                Sebagai penerapan dari materi tersebut, dalam praktikum ini akan dibangun sebuah aplikasi sederhana bernama <strong>Expense Tracker</strong> yang digunakan untuk mencatat transaksi keuangan. Aplikasi ini memiliki form input yang terdiri dari beberapa bagian, seperti judul transaksi, nominal uang, dan kategori pengeluaran. Melalui praktikum ini, mahasiswa diharapkan dapat memahami penggunaan input widgets, penerapan form validation, serta konsep state management pada Flutter sehingga dapat mengembangkan aplikasi yang mampu menerima dan mengelola data dari pengguna dengan baik.
+              </p>
+            </section>
+
+            <section>
+              <h5>Tujuan Praktikum</h5>
+              <p>Praktikum ini bertujuan untuk:</p>
+              <ul>
+                <li>Menangkap teks dari pengguna via controller.</li>
+                <li>Menerapkan widget dropdown statis.</li>
+                <li>Validasi input untuk mencegah data kosong atau format salah.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h5>Langkah Praktikum</h5>
+              
+              <h6>1. Buat file baru dengan nama add_transaction_screen.dart</h6>
+              <p>
+                Buat file baru dengan nama <code>add_transaction_screen.dart</code> pada folder <code>lib</code>. Berikut struktur yang akan terbentuk dari folder <code>lib</code> yang dibuat. Dapat dilihat jika terdapat 2 file yang diantaranya ada <code>add_transaction_screen.dart</code> dan juga <code>main.dart</code>.
+              </p>
+              
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/1.png" class="img-fluid rounded shadow-sm" alt="Struktur Folder">
+                <p class="small text-muted mt-2">Gambar 1: Struktur folder lib</p>
+              </div>
+
+              <h6>2. Persiapan State & Controller</h6>
+              <p>
+                Pada bagian ini, kita menggunakan <code>GlobalKey</code> untuk memicu validasi agar mencegah data yang tidak sesuai format masuk sebelum disimpan ke dalam sistem. Selain itu, pada bagian ini, Controller juga digunakan untuk judul dan nominal.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/2.png" class="img-fluid rounded shadow-sm" alt="State & Controller">
+                <p class="small text-muted mt-2">Gambar 2: Persiapan State & Controller</p>
+              </div>
+
+              <h6>3. Membuat Kolom Input (TextFormField)</h6>
+              <p>
+                Pada bagian ini, kita membungkus semua kolom dengan menggunakan widget <code>Form</code> dan menghubungkan kunci controller masing-masing dan menggunakan <code>keyboardType: TextInputType.number</code> khusus nominal.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/3.png" class="img-fluid rounded shadow-sm" alt="TextFormField">
+                <p class="small text-muted mt-2">Gambar 3: Kolom Input dengan TextFormField</p>
+              </div>
+
+              <h6>4. Dropdown & Tombol Simpan</h6>
+              <p>
+                <code>DropdownButtonFormField</code> digunakan untuk pilihan kategori dan tombol untuk mengeksekusi validasi secara keseluruhan.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/4.png" class="img-fluid rounded shadow-sm" alt="Dropdown & Button">
+                <p class="small text-muted mt-2">Gambar 4: Dropdown dan Tombol Simpan</p>
+              </div>
+
+              <h6>5. Hasil Akhir: Mockup Formulir</h6>
+              <p>Berikut merupakan demonstrasi dari kode program yang telah dibuat.</p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/5.png" class="img-fluid rounded shadow-sm" alt="Tampilan Awal Form" style="max-width: 300px;">
+                <p class="small text-muted mt-2">Gambar 5: Tampilan awal form transaksi</p>
+              </div>
+
+              <p>
+                Gambar di atas merupakan tampilan awal dari kode program yang telah dibuat di mana, kode program di atas menampilkan input untuk user menambahkan data transaksi baru yang di antaranya ada judul transaksi, nominal transaksi dan kategori transaksi dengan format pilihan.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/6.png" class="img-fluid rounded shadow-sm" alt="Form Terisi" style="max-width: 300px;">
+                <p class="small text-muted mt-2">Gambar 6: Form dengan data fiktif</p>
+              </div>
+
+              <p>
+                Gambar di atas merupakan gambar yang sama seperti sebelumnya, namun pada gambar ini, data transaksi telah diisi dengan data fiktif sementara sebagai bahan uji coba.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/7.png" class="img-fluid rounded shadow-sm" alt="Data Tersimpan" style="max-width: 300px;">
+                <p class="small text-muted mt-2">Gambar 7: Notifikasi data tersimpan</p>
+              </div>
+
+              <p>
+                Gambar di atas merupakan tampilan ketika tombol simpan transaksi ditekan, maka akan muncul notifikasi pada bagian bawah yang menyatakan jika data transaksi yang telah dimasukkan sebelumnya telah disimpan.
+              </p>
+            </section>
+
+            <section>
+              <h5>Latihan Praktikum</h5>
+              
+              <h6>1. Menambahkan Controller untuk Tanggal</h6>
+              <p>
+                Pada bagian deklarasi controller, ditambahkan <code>_dateController</code> untuk menyimpan nilai tanggal yang dipilih melalui DatePicker. Sebelumnya hanya terdapat controller untuk judul dan nominal transaksi.
+              </p>
+              <p>
+                Penambahan <code>_dateController</code> diperlukan agar tanggal yang dipilih dapat ditampilkan pada TextFormField dan digunakan kembali ketika data transaksi disimpan.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/8.png" class="img-fluid rounded shadow-sm" alt="Date Controller">
+                <p class="small text-muted mt-2">Gambar 8: Menambahkan Date Controller</p>
+              </div>
+
+              <h6>2. Menambahkan dispose() untuk Controller Tanggal</h6>
+              <p>
+                Pada method <code>dispose()</code>, ditambahkan perintah untuk menghapus <code>_dateController</code> ketika halaman sudah tidak digunakan.
+              </p>
+              <p>
+                Sebelumnya hanya <code>_titleController</code> dan <code>_amountController</code> yang dihapus. Penambahan <code>_dateController.dispose()</code> dilakukan agar resource yang digunakan oleh controller tanggal dapat dilepaskan dengan baik.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/9.png" class="img-fluid rounded shadow-sm" alt="Dispose Method">
+                <p class="small text-muted mt-2">Gambar 9: Method dispose()</p>
+              </div>
+
+              <h6>3. Menambahkan Input Tanggal Transaksi</h6>
+              <p>
+                Setelah input kategori dan sebelum tombol Simpan Transaksi, ditambahkan TextFormField baru untuk tanggal transaksi.
+              </p>
+              <p>
+                Input ini menggunakan <code>_dateController</code> dan <code>readOnly: true</code>, sehingga pengguna tidak mengetik tanggal secara langsung. Format yang ditampilkan pada input adalah DD/MM/YYYY dan terdapat ikon kalender sebagai penanda bahwa input digunakan untuk memilih tanggal.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/10.png" class="img-fluid rounded shadow-sm" alt="Input Tanggal">
+                <p class="small text-muted mt-2">Gambar 10: Input Tanggal Transaksi</p>
+              </div>
+
+              <h6>4. Menambahkan Tombol Plus dan showDatePicker</h6>
+              <p>
+                Pada input tanggal ditambahkan tombol <code>add_circle</code> melalui <code>suffixIcon</code>. Tombol tersebut digunakan untuk membuka kalender dengan fungsi <code>showDatePicker()</code>.
+              </p>
+              <p>
+                Ketika tombol plus ditekan, <code>showDatePicker()</code> akan menampilkan kalender. <code>initialDate</code> menggunakan tanggal hari ini, sedangkan tanggal yang dapat dipilih dibatasi mulai tahun 2000 sampai tanggal hari ini.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/11.png" class="img-fluid rounded shadow-sm" alt="showDatePicker">
+                <p class="small text-muted mt-2">Gambar 11: Implementasi showDatePicker()</p>
+              </div>
+
+              <h6>5. Membuat Format Tanggal Menjadi DD/MM/YY</h6>
+              <p>
+                Setelah pengguna memilih tanggal, tanggal tersebut diubah menjadi format DD/MM/YYYY sebelum ditampilkan pada input.
+              </p>
+              <p>
+                Kode tersebut mengambil nilai hari, bulan, dan tahun dari <code>pickedDate</code>. Fungsi <code>padLeft(2, '0')</code> digunakan agar angka hari dan bulan selalu terdiri dari dua digit, misalnya 05/09/2026 bukan 5/9/2026. Setelah itu, hasilnya dimasukkan ke <code>_dateController</code>.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/12.png" class="img-fluid rounded shadow-sm" alt="Format Tanggal">
+                <p class="small text-muted mt-2">Gambar 12: Format Tanggal DD/MM/YYYY</p>
+              </div>
+
+              <h6>6. Menambahkan Validasi Wajib Diisi</h6>
+              <p>
+                Pada input tanggal juga ditambahkan validasi untuk memastikan pengguna sudah memilih tanggal sebelum menyimpan transaksi.
+              </p>
+              <p>
+                Validasi ini membuat tanggal menjadi input wajib. Jika pengguna langsung menekan tombol Simpan Transaksi tanpa memilih tanggal, form tidak akan dianggap valid dan akan menampilkan pesan "Tanggal wajib diisi".
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/13.png" class="img-fluid rounded shadow-sm" alt="Validasi Tanggal">
+                <p class="small text-muted mt-2">Gambar 13: Validasi Tanggal Wajib Diisi</p>
+              </div>
+
+              <h6>7. Menambahkan Tanggal pada Pesan Snackbar</h6>
+              <p>
+                Bagian SnackBar juga mengalami perubahan. Sebelumnya hanya judul dan nominal yang ditampilkan, sedangkan setelah perubahan tanggal transaksi ikut ditampilkan.
+              </p>
+              <p>
+                Dengan perubahan tersebut, ketika transaksi berhasil disimpan, informasi yang muncul pada SnackBar mencakup judul transaksi, nominal transaksi, dan tanggal transaksi.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/14.png" class="img-fluid rounded shadow-sm" alt="SnackBar Update">
+                <p class="small text-muted mt-2">Gambar 14: SnackBar dengan Tanggal</p>
+              </div>
+
+              <h6>8. Demonstrasi Output</h6>
+              <p>Berikut output ketika kode program tersebut dijalankan.</p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/15.png" class="img-fluid rounded shadow-sm" alt="Form dengan Input Tanggal" style="max-width: 300px;">
+                <p class="small text-muted mt-2">Gambar 15: Form dengan Input Tanggal</p>
+              </div>
+
+              <p>
+                Terlihat jika input Tanggal Transaksi telah ditambahkan pada gambar di atas.
+              </p>
+
+              <div class="text-center my-4">
+                <img src="images/gambar laprak 3/16.png" class="img-fluid rounded shadow-sm" alt="DatePicker Calendar" style="max-width: 300px;">
+                <p class="small text-muted mt-2">Gambar 16: Tampilan DatePicker Calendar</p>
+              </div>
+
+              <p>
+                Ketika tombol dengan tanda tambah pada bagian kiri ditekan, akan muncul tampilan kalender seperti ini untuk memilih tanggal transaksi dengan lebih mudah.
+              </p>
+            </section>
+
+            <section>
+              <h5>Kesimpulan</h5>
+              <p>
+                Berdasarkan praktikum yang telah dilakukan, dapat disimpulkan bahwa Flutter menyediakan berbagai Input Widgets yang dapat digunakan untuk menerima dan mengelola data dari pengguna. Pada aplikasi Expense Tracker, digunakan TextFormField untuk judul dan nominal transaksi, DropdownButtonFormField untuk kategori, serta Form dan validator untuk memastikan input wajib diisi sebelum disimpan. Penggunaan TextEditingController juga membantu dalam mengelola nilai yang dimasukkan oleh pengguna.
+              </p>
+              <p>
+                Pada tahap pengembangan, ditambahkan input Tanggal Transaksi menggunakan TextFormField dan showDatePicker() sehingga pengguna dapat memilih tanggal melalui kalender dan menampilkannya dalam format DD/MM/YYYY. Fitur ini juga dilengkapi validasi agar tanggal wajib diisi. Melalui praktikum ini, dapat dipahami penerapan input widgets, form validation, controller, dan state management dasar dalam membangun aplikasi Flutter yang dapat menerima dan mengelola data pengguna dengan lebih terstruktur.
+              </p>
+            </section>
+
+          </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light pt-5">
+    <div class="container pb-4 border-bottom border-secondary">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Tentang</h6>
+          <p class="small text-white-50 mb-0">
+            Fadil Web adalah layanan pembuatan website, aplikasi, dan solusi digital.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1"><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+            <li class="mb-1"><a href="about.html" class="text-decoration-none text-light">About</a></li>
+            <li class="mb-1"><a href="portfolio.html" class="text-decoration-none text-light">Portfolio</a></li>
+            <li class="mb-1"><a href="laprak.html" class="text-decoration-none text-light">Laprak</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center text-md-start">
+          <h6 class="fw-bold mb-3">Follow Me</h6>
+          <a href="https://wa.me/6282311488810" target="_blank" class="text-light fs-4 me-2 text-decoration-none">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="https://facebook.com/profile.php?id=100040110443069" target="_blank" class="text-light fs-4 me-2 text-decoration-none">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/fadilasril_20" target="_blank" class="text-light fs-4 text-decoration-none">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3">
+      <p class="small mb-0">&copy; 2025 | Fadil Insanus Siddik</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
