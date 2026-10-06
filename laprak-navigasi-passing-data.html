@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navigasi & Passing Data - Fadil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logowebsitetr.png">
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="images/logowebsitetr.png" alt="Logo" class="me-2" style="height: 28px;">
+        <span>Fadil Web<span class="text-primary">.</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain5">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain5">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="laprak.html">Laprak</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mt-5 pt-5">
+    <section class="py-5">
+      <div class="container">
+        <div class="mb-4">
+          <a href="laprak.html" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-arrow-left me-1"></i> Kembali ke Daftar Laprak
+          </a>
+        </div>
+        <div class="card border-0 shadow-sm">
+          <div class="card-header bg-primary text-white">
+            <h4 class="mb-1">Navigasi & Passing Data</h4>
+            <p class="small mb-0">Navigator, Konsep Stack, dan Constructor</p>
+          </div>
+          <div class="card-body">
+<span class="badge text-bg-primary mb-3">Aplikasi Mobile</span>
+
+          <article class="laprak-report">
+            <section>
+              <h5>Pendahuluan</h5>
+              <p>
+                Aplikasi mobile membutuhkan tampilan dan navigasi yang baik agar pengguna dapat berpindah dari satu halaman ke halaman lainnya dengan mudah. Dalam pengembangan aplikasi menggunakan Flutter, navigasi antar halaman dapat dilakukan menggunakan <code>Navigator.push</code> untuk membuka halaman baru dan <code>Navigator.pop</code> untuk kembali ke halaman sebelumnya setelah suatu proses selesai. Selain itu, data antar halaman juga dapat dikirim melalui constructor sehingga informasi yang dipilih atau dimasukkan pada satu halaman dapat ditampilkan pada halaman lainnya.
+              </p>
+              <p>
+                Pada praktikum ini dibuat aplikasi sederhana berupa <strong>Expense Tracker</strong> yang memiliki beberapa halaman, yaitu dashboard, form pencatatan transaksi, dan detail transaksi. Penerapan navigasi digunakan untuk berpindah dari dashboard ke form transaksi, kembali ke dashboard setelah transaksi disimpan, serta membuka halaman detail dengan mengirimkan data transaksi melalui constructor. Pada form transaksi juga ditambahkan input tanggal dengan <code>showDatePicker</code> dan validasi agar tanggal wajib diisi. Melalui implementasi tersebut, praktikum ini memberikan pemahaman mengenai penggunaan navigasi dan pengiriman data antar halaman pada aplikasi Flutter.
+              </p>
+            </section>
+
+            <section>
+              <h5>Tujuan Praktikum</h5>
+              <p>Praktikum ini bertujuan untuk:</p>
+              <ul>
+                <li>Menerapkan <code>Navigator.push</code> untuk berpindah ke layer baru.</li>
+                <li>Menggunakan <code>Navigator.pop</code> untuk menutup layer setelah aksi selesai.</li>
+                <li>Mengirim data (String, int) antar layer melalui Constructor.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h5>Langkah Praktikum</h5>
+              
+              <h6>1. Membuat Halaman Detail Transaksi</h6>
+              <p>
+                Langkah pertama yang harus kita lakukan yaitu membuat halaman detail transaksi dan mendeklarasikan variabel final serta menampilkan data pada UI (Text) di <code>detail_transaction_screen.dart</code>.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/1.png" class="img-fluid" alt="Membuat halaman detail transaksi">
+                <figcaption>Gambar 1: Kode untuk membuat halaman detail transaksi</figcaption>
+              </figure>
+
+              <h6>2. Pindah ke Detail & Mengirim Data (Push)</h6>
+              <p>
+                Pada file Dashboard, pada widget <code>ListTile</code> daftar transaksi, tambahkan fungsi <code>onTap</code>. Dalam penambahan fungsi ini, gunakan <code>Navigator.push</code> dengan <code>MaterialPageRoute</code>, lalu isi data constructor (title & amount) sesuai data baris yang diklik.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/2.png" class="img-fluid" alt="Navigasi dengan push">
+                <figcaption>Gambar 2: Implementasi Navigator.push dengan passing data</figcaption>
+              </figure>
+
+              <h6>3. Menutup Layar / Kembali Otomatis (Pop)</h6>
+              <p>
+                Setelah itu, kembali ke file <code>add_transaction_screen.dart</code> lagi, lalu gunakan kode ini agar formular tertutup otomatis dan kembali ke Dashboard setelah klik Simpan.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/3.png" class="img-fluid" alt="Navigator pop">
+                <figcaption>Gambar 3: Implementasi Navigator.pop untuk menutup halaman</figcaption>
+              </figure>
+
+              <h6>4. Hasil Akhir: Mockup Halaman Detail</h6>
+              <p>
+                Dari output di atas dapat kita lihat demonstrasi dari program yang dikerjakan pada praktikum.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/4.png" class="img-fluid" alt="Hasil mockup halaman detail">
+                <figcaption>Gambar 4: Tampilan halaman detail transaksi</figcaption>
+              </figure>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/5.png" class="img-fluid" alt="Hasil mockup halaman detail 2">
+                <figcaption>Gambar 5: Tampilan dashboard dengan daftar transaksi</figcaption>
+              </figure>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/6.png" class="img-fluid" alt="Hasil mockup halaman detail 3">
+                <figcaption>Gambar 6: Tampilan navigasi dari dashboard ke detail</figcaption>
+              </figure>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/7.png" class="img-fluid" alt="Hasil mockup halaman detail 4">
+                <figcaption>Gambar 7: Demonstrasi passing data antar halaman</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h5>Tugas</h5>
+              
+              <h6>Membuat Input Tanggal Sebelum Tombol Simpan untuk Mengisi Tanggal Transaksi</h6>
+              <p>
+                Untuk melakukan hal ini, pertama-tama kita perlu menambahkan controller baru untuk tanggal agar bisa menampung tanggal yang dipilih dari <code>showDatePicker</code>. Bagian ini ditambahkan pada file <code>add_transaction_screen.dart</code>.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/8.png" class="img-fluid" alt="Menambahkan controller tanggal">
+                <figcaption>Gambar 8: Menambahkan date controller</figcaption>
+              </figure>
+
+              <p>
+                Selanjutnya, tepat di bawah controller yang ditambahkan tadi, tambahkan pula kode program ini untuk membuka kalender ketika tombol ditekan, serta memasukkan hasilnya ke <code>_dateController</code>.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/9.png" class="img-fluid" alt="Fungsi showDatePicker">
+                <figcaption>Gambar 9: Implementasi showDatePicker</figcaption>
+              </figure>
+
+              <p>
+                Selanjutnya, tambahkan kode program berikut pada bagian child dengan tujuan untuk membuat tampilan teks input dan validasi teks input tidak bisa dibiarkan kosong.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/10.png" class="img-fluid" alt="TextFormField untuk tanggal">
+                <figcaption>Gambar 10: TextFormField dengan validasi tanggal</figcaption>
+              </figure>
+
+              <h6>Hasil</h6>
+              <p>
+                Pada output di atas, dapat kita lihat jika input tanggal transaksi telah ditambahkan. Pada output juga diperlihatkan tampilan kalender yang muncul ketika tombol tambah pada input tanggal diklik.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/11.png" class="img-fluid" alt="Hasil input tanggal">
+                <figcaption>Gambar 11: Tampilan input tanggal dan kalender</figcaption>
+              </figure>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar laprak 4/12.png" class="img-fluid" alt="Hasil input tanggal 2">
+                <figcaption>Gambar 12: Tampilan form transaksi dengan input tanggal terisi</figcaption>
+              </figure>
+            </section>
+
+            <section>
+              <h5>Kesimpulan</h5>
+              <p>
+                Berdasarkan praktikum yang telah dilakukan, dapat disimpulkan bahwa navigasi pada Flutter dapat diterapkan dengan menggunakan <code>Navigator.push</code> untuk membuka halaman baru dan <code>Navigator.pop</code> untuk kembali ke halaman sebelumnya. Pengiriman data antar halaman dapat dilakukan melalui constructor dengan menggunakan parameter seperti String dan int, sehingga data transaksi dapat ditampilkan pada halaman detail sesuai data yang dikirim dari dashboard.
+              </p>
+              <p>
+                Selain itu, penambahan input tanggal menggunakan <code>showDatePicker</code> dan validasi membantu membuat form transaksi lebih terstruktur dan memastikan data yang diperlukan telah diisi sebelum transaksi disimpan. Praktikum ini memberikan pemahaman yang baik tentang konsep navigasi stack-based pada Flutter dan cara mengelola aliran data antar screen dalam aplikasi mobile.
+              </p>
+            </section>
+
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light pt-5">
+    <div class="container pb-4 border-bottom border-secondary">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Tentang</h6>
+          <p class="small text-white-50 mb-0">
+            Fadil Web adalah layanan pembuatan website, aplikasi, dan solusi digital.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1"><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+            <li class="mb-1"><a href="about.html" class="text-decoration-none text-light">About</a></li>
+            <li class="mb-1"><a href="portfolio.html" class="text-decoration-none text-light">Portfolio</a></li>
+            <li class="mb-1"><a href="laprak.html" class="text-decoration-none text-light">Laprak</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center text-md-start">
+          <h6 class="fw-bold mb-3">Follow Me</h6>
+          <a href="https://wa.me/6282311488810" target="_blank" class="text-light fs-4 me-2 text-decoration-none">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="https://facebook.com/profile.php?id=100040110443069" target="_blank" class="text-light fs-4 me-2 text-decoration-none">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/fadilasril_20" target="_blank" class="text-light fs-4 text-decoration-none">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3">
+      <p class="small mb-0">&copy; 2025 | Fadil Insanus Siddik</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
