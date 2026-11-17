@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>List, Grid, Gambar, dan Asset pada ResepKu - Fadil</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/logowebsitetr.png">
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <img src="images/logowebsitetr.png" alt="Logo" class="me-2" style="height: 28px;">
+        <span>Fadil Web<span class="text-primary">.</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain7">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain7">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="laprak.html">Laprak</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mt-5 pt-5">
+    <section class="py-5">
+      <div class="container">
+        <div class="mb-4">
+          <a href="laprak.html" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-arrow-left me-1"></i> Kembali ke Daftar Laprak
+          </a>
+        </div>
+        <div class="card border-0 shadow-sm">
+          <div class="card-header bg-primary text-white">
+            <h4 class="mb-1">List, Grid, Gambar, dan Asset pada ResepKu</h4>
+            <p class="small mb-0">Praktikum 7 - Aplikasi Mobile</p>
+          </div>
+          <div class="card-body">
+<span class="badge text-bg-primary mb-3">Aplikasi Mobile</span>
+
+          <article class="laprak-report">
+            
+            <!-- A. PRAKTIKUM -->
+            <section>
+              <h5>A. Praktikum</h5>
+              
+              <p>
+                1. Lanjutkan folder ResepKu pada praktikum sebelumnya, lalu tambahkan beberapa file sehingga struktur folder yang terbentuk seperti berikut.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/1.png" class="img-fluid" alt="Struktur folder">
+                <figcaption>Gambar 1: Struktur folder aplikasi ResepKu</figcaption>
+              </figure>
+
+              <p>
+                2. Isi kode program pada tiap file sesuai dengan yang ada pada modul praktikum.
+              </p>
+
+              <h6>3. Check Point 1:</h6>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/2.png" class="img-fluid" alt="Tampilan halaman utama">
+                <figcaption>Gambar 2: Tampilan halaman utama aplikasi</figcaption>
+              </figure>
+
+              <p>
+                Di atas merupakan gambar tampilan halaman utama ketika kode program dijalankan, jika dibandingkan dengan tampilan utama pada praktikum sebelumnya (6) terlihat dengan jelas beberapa perbedaan diantaranya, penambahan logo aplikasi pada bagian pojok kiri, serta perubahan font teks yang mana ini dapat kita lihat dengan jelas pada huruf a dan g dari kedua gambar.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/3.png" class="img-fluid" alt="Perbandingan tampilan">
+                <figcaption>Gambar 3: Perbandingan dengan praktikum sebelumnya</figcaption>
+              </figure>
+
+              <p>
+                Terlihat dengan jelas beberapa perbedaan diantaranya, penambahan logo aplikasi pada bagian pojok kiri, serta perubahan font teks yang mana ini dapat kita lihat dengan jelas pada huruf a dan g dari kedua gambar.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/4.png" class="img-fluid" alt="Detail perubahan">
+                <figcaption>Gambar 4: Detail perubahan font</figcaption>
+              </figure>
+
+              <p>
+                Perubahan tersebut dikarenakan ditambahkannya folder assets yang berisikan font serta gambar-gambar yang dibutuhkan yang dipanggil pada file kode program untuk halaman utama (home_page.dart) serta font poppins yang telah diinisiasi di pada file pubspec.yaml dan dipanggil pada file main.dart.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/5.png" class="img-fluid" alt="Konfigurasi assets">
+                <figcaption>Gambar 5: Konfigurasi assets di pubspec.yaml</figcaption>
+              </figure>
+
+              <p>
+                4. Lanjutkan langkah B.1 hingga B.3 sesuai dengan yang diinstruksikan pada modul.
+              </p>
+
+              <h6>5. Check Point 2:</h6>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/6.png" class="img-fluid" alt="Error state">
+                <figcaption>Gambar 6: Tampilan error state</figcaption>
+              </figure>
+
+              <p>
+                Dapat kita lihat pada gambar di atas ketika error state aktif (tepatnya pada gambar menu pertama) gambarnya digantikan dengan gambar placeholder yang ada pada folder assets sebelumnya.
+              </p>
+              <p>
+                Hal tersebut dikarenakan kode program recipe_image.dart di bawah ini yang membuat widget RecipeImage yang menampilkan gambar resep dari internet menggunakan Image.network(). Widget ini dilengkapi dengan loading state yang menampilkan ikon makanan ketika gambar masih dalam proses pengunduhan, serta error state yang menampilkan gambar pengganti (placeholder.png) apabila gambar gagal dimuat, misalnya karena URL tidak valid atau tidak ada koneksi internet. Selain itu, terdapat parameter cacheWidth untuk mengatur ukuran gambar saat di-decode sehingga penggunaan memori menjadi lebih efisien.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/7.png" class="img-fluid" alt="Kode RecipeImage">
+                <figcaption>Gambar 7: Kode widget RecipeImage</figcaption>
+              </figure>
+
+              <p>
+                6. Lanjutkan langkah C.1 sampai dengan C.2 sesuai dengan yang diinstruksikan pada modul praktikum.
+              </p>
+
+              <h6>7. Menghitung ukuran kartu</h6>
+              <p>
+                Pada HP dengan lebar layar 360 dp, hitung lebar dan tinggi setiap kartu grid. Gunakan rumus dari Pertemuan 10 dan tuliskan langkahnya di laporan.
+              </p>
+
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Yang dihitung</th>
+                      <th>Hasil</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Lebar kartu (dp)</td>
+                      <td>164 dp</td>
+                    </tr>
+                    <tr>
+                      <td>Tinggi kartu (dp)</td>
+                      <td>218,67 dp</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                8. Lanjutkan langkah D.1 sesuai dengan instruksi yang ada pada modul.
+              </p>
+
+              <h6>9. Pengujian Aplikasi</h6>
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead class="table-light">
+                    <tr>
+                      <th>No</th>
+                      <th>Skenario</th>
+                      <th>Hasil yang diharapkan</th>
+                      <th>Sesuai?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Buka aplikasi</td>
+                      <td>Logo di AppBar, font Poppins, thumbnail foto di setiap resep</td>
+                      <td class="text-center">✔️</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Tekan tombol grid di AppBar</td>
+                      <td>Resep tampil sebagai kartu dua kolom; ikon tombol berubah menjadi ikon list</td>
+                      <td class="text-center">✔️</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Di mode grid, tap ikon hati pada Margheritta</td>
+                      <td>Ikon merah dan badge tetap merah</td>
+                      <td class="text-center">✔️</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Kembali ke mode list</td>
+                      <td>Ikon hati Margheritta tetap merah</td>
+                      <td class="text-center">✔️</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Tap kartu Alfredo di mode grid</td>
+                      <td>Halaman detail terbuka dengan foto besar di atas</td>
+                      <td class="text-center">✔️</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Aktifkan mode pesawat, tutup dan buka aplikasi</td>
+                      <td>Gambar placeholder tampil tanpa error merah</td>
+                      <td class="text-center">✔️</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h6>10. Check Point 3:</h6>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/8.png" class="img-fluid" alt="Grid view">
+                <figcaption>Gambar 8: Tampilan grid view</figcaption>
+              </figure>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/9.png" class="img-fluid" alt="List view">
+                <figcaption>Gambar 9: Tampilan list view</figcaption>
+              </figure>
+
+              <p>
+                Susunan menu pada gambar di atas terlihat dalam bentuk grid, hal ini disebabkan oleh file lib/widgets/recipe_grid_card.dart yang pada file tersebut telah dibuat widget RecipeImage yang menampilkan gambar resep dari internet menggunakan Image.network(). Widget ini dilengkapi dengan loading state yang menampilkan ikon makanan ketika gambar masih dalam proses pengunduhan, serta error state yang menampilkan gambar pengganti (placeholder.png) apabila gambar gagal dimuat, misalnya karena URL tidak valid atau tidak ada koneksi internet. Selain itu, terdapat parameter cacheWidth untuk mengatur ukuran gambar saat di-decode sehingga penggunaan memori menjadi lebih efisien.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/10.png" class="img-fluid" alt="RecipeGridCard">
+                <figcaption>Gambar 10: Kode widget RecipeGridCard</figcaption>
+              </figure>
+
+              <p>
+                Tak hanya itu pada file lib/pages/home_page.dart telah ditambahkan beberapa hal lagi. Pada kode program tersebut digunakan untuk membuat tampilan daftar resep dalam bentuk grid menggunakan widget GridView.builder. Variabel _isGrid berfungsi untuk menentukan apakah resep ditampilkan dalam bentuk list atau grid. Pengguna dapat mengubah tampilannya melalui tombol IconButton yang menggunakan setState() agar perubahan tampilan langsung diperbarui. Pada fungsi _buildGrid(), properti crossAxisCount: 2 mengatur jumlah kolom menjadi dua, sedangkan mainAxisSpacing dan crossAxisSpacing mengatur jarak antar kartu baik secara vertikal maupun horizontal. Properti childAspectRatio: 3 / 4 menentukan perbandingan lebar dan tinggi setiap kartu. Selanjutnya, itemCount menentukan jumlah resep yang ditampilkan dan itemBuilder digunakan untuk membuat setiap kartu resep menggunakan widget RecipeGridCard.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/11.png" class="img-fluid" alt="HomePage GridView">
+                <figcaption>Gambar 11: Kode HomePage dengan GridView.builder</figcaption>
+              </figure>
+
+              <p>
+                Selanjutnya, pada detail_page.dart juga ditambahkan.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/12.png" class="img-fluid" alt="Detail page">
+                <figcaption>Gambar 12: Penambahan kode pada detail_page.dart</figcaption>
+              </figure>
+
+              <p>
+                Penambahan kode program tersebut berfungsi untuk menampilkan gambar resep pada halaman detail menggunakan widget RecipeImage. Widget ClipRRect digunakan untuk membuat sudut gambar melengkung, sedangkan AspectRatio mengatur perbandingan ukuran gambar menjadi 16:9 agar terlihat proporsional. Kode ini berkaitan dengan fitur grid karena ketika pengguna memilih salah satu resep dari kartu grid pada halaman utama, gambar resep akan ditampilkan kembali dalam ukuran yang lebih besar pada halaman detail sehingga pengguna dapat melihatnya dengan lebih jelas.
+              </p>
+            </section>
+
+            <!-- B. PERTANYAAN ANALISIS -->
+            <section>
+              <h5>B. Pertanyaan Analisis</h5>
+
+              <h6>1. Pada skenario 3 dan 4 Langkah D.2, status favorit tetap sama walaupun tampilan berganti dari grid ke list. Padahal RecipeGridCard dan RecipeTile adalah dua widget yang berbeda. Jelaskan mengapa, dengan mengaitkannya pada Modul 6.</h6>
+              <p>
+                Status favorit tidak berubah ketika tampilan berganti dari grid ke list karena pengelolaan data favorit dilakukan secara terpusat melalui FavoriteProvider, bukan disimpan secara terpisah pada masing-masing widget. Sesuai konsep app state pada Modul 6, FavoriteProvider yang menggunakan ChangeNotifier dibagikan ke seluruh aplikasi melalui MultiProvider. Ketika pengguna menekan tombol favorit, fungsi toggle() akan memperbarui daftar _items dan menjalankan notifyListeners() untuk memberi tahu perubahan tersebut. Dengan begitu, RecipeGridCard maupun RecipeTile dapat memperoleh status favorit yang sama melalui context.watch&lt;FavoriteProvider&gt;(), meskipun keduanya merupakan widget yang berbeda.
+              </p>
+
+              <h6>2. Di dalam loadingBuilder terdapat baris if (loadingProgress == null) return child;. Apa yang akan tampil jika baris tersebut dihapus? Jelaskan alasannya.</h6>
+              <p>
+                Apabila baris if (loadingProgress == null) return child; dihilangkan, gambar resep tidak akan ditampilkan meskipun proses pengunduhannya sudah selesai. Sebagai gantinya, aplikasi akan terus memperlihatkan tampilan loading berupa kotak dengan ikon Icons.restaurant_menu. Hal ini karena loadingBuilder akan terus dipanggil selama proses pemuatan gambar berlangsung. Ketika gambar berhasil diunduh sepenuhnya, nilai loadingProgress akan menjadi null. Kondisi tersebut digunakan sebagai tanda bahwa gambar sudah siap ditampilkan, sehingga widget child perlu dikembalikan agar gambar dapat muncul di layar.
+              </p>
+
+              <h6>3. Hitung berapa pixel foto thumbnail yang di-decode dengan dan tanpa cacheWidth: 168, jika foto asli dari server berukuran 1200 × 800 pixel.</h6>
+              <p>
+                <strong>Tanpa menggunakan cacheWidth:</strong><br>
+                Gambar akan di-decode dengan ukuran asli penuh yaitu 1200 × 800 pixel = 960.000 pixel.
+              </p>
+              <p>
+                <strong>Dengan menggunakan cacheWidth:</strong><br>
+                Ketika cacheWidth diset 168, Flutter akan men-decode gambar dengan lebar 168 pixel sambil mempertahankan aspect ratio. Tinggi akan dihitung proporsional: (800 / 1200) × 168 = 112 pixel. Total pixel yang di-decode: 168 × 112 = 18.816 pixel.
+              </p>
+              <p>
+                Dengan menggunakan cacheWidth, jumlah pixel yang di-decode berkurang dari 960.000 menjadi 18.816 pixel, menghemat sekitar 98% memori. Ini sangat efisien terutama saat menampilkan banyak thumbnail dalam list atau grid.
+              </p>
+
+              <h6>4. Logo memakai font Poppins. Bagaimana cara Flutter menemukan font tersebut?</h6>
+              <p>
+                Logo aplikasi menggunakan font Poppins yang dideklarasikan pada file pubspec.yaml di bagian fonts. Flutter akan mencari font tersebut di folder assets/fonts/ sesuai dengan path yang didefinisikan. Ketika aplikasi dijalankan, Flutter akan memuat font Poppins dan menggunakannya sebagai font family default untuk seluruh aplikasi karena dideklarasikan sebagai bagian dari theme pada MaterialApp di file main.dart. Proses ini melibatkan beberapa tahap: pertama, Flutter membaca konfigurasi pubspec.yaml dan memuat font dari assets, kedua, font didaftarkan ke dalam font tree Flutter, ketiga, widget Text yang menggunakan fontFamily: 'Poppins' atau TextStyle dengan fontFamily: 'Poppins' akan merujuk ke font tersebut, dan keempat, Flutter akan mencari font yang cocok berdasarkan nama family dan weight/style yang diminta.
+              </p>
+            </section>
+
+            <!-- C. LATIHAN -->
+            <section>
+              <h5>C. Latihan</h5>
+
+              <h6>1. Latihan 1</h6>
+              <p>
+                Tambahkan deretan cuisine filter di bagian atas halaman utama menggunakan widget ChoiceChip.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/13.png" class="img-fluid" alt="Latihan 1 - Part 1">
+                <figcaption>Gambar 13: Hasil latihan 1 - Deretan cuisine filter</figcaption>
+              </figure>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/14.png" class="img-fluid" alt="Latihan 1 - Part 2">
+                <figcaption>Gambar 14: Implementasi ChoiceChip</figcaption>
+              </figure>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/15.png" class="img-fluid" alt="Latihan 1 - Part 3">
+                <figcaption>Gambar 15: Tampilan filter cuisine</figcaption>
+              </figure>
+
+              <h6>a. Tambahkan state String? _cuisine di _HomePageState. Nilai null berarti semua cuisine.</h6>
+              <p>
+                Pada soal ini, kita diminta untuk menambahkan state bernama _cuisine dengan tipe data String? (nullable String) di dalam class _HomePageState. State ini berfungsi untuk menyimpan pilihan cuisine yang sedang aktif dipilih oleh user. Penggunaan tipe data nullable dipilih karena memiliki dua kondisi penting: ketika _cuisine bernilai null, artinya user memilih opsi "Semua" sehingga tidak ada filter yang diterapkan dan semua resep akan ditampilkan. Sedangkan ketika _cuisine berisi nilai tertentu seperti "Italian" atau "Asian", maka hanya resep dengan cuisine tersebut yang akan ditampilkan. State ini bersifat ephemeral atau lokal karena hanya HomePage yang membutuhkannya untuk keperluan filtering, sehingga tidak perlu disimpan secara global menggunakan Provider seperti state favorit atau tema. Ketika user menekan salah satu ChoiceChip, nilai _cuisine akan diubah menggunakan method setState() yang akan memicu rebuild widget dan melakukan filter ulang terhadap data resep yang ditampilkan.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/16.png" class="img-fluid" alt="State _cuisine">
+                <figcaption>Gambar 16: Deklarasi state _cuisine</figcaption>
+              </figure>
+
+              <h6>b. Ambil daftar cuisine dari data, bukan ditulis manual, misalnya dummyRecipes.map((r) => r.cuisine).toSet().</h6>
+              <p>
+                Pada soal ini, kita diminta untuk mengambil daftar cuisine secara dinamis dari data dummyRecipes, bukan dengan cara hardcode atau menulis manual satu per satu. Pendekatan dinamis ini memiliki beberapa keunggulan penting yaitu fleksibilitas dimana jika data resep bertambah atau berkurang maka daftar cuisine akan otomatis menyesuaikan tanpa perlu modifikasi kode, menerapkan DRY principle (Don't Repeat Yourself) sehingga tidak ada duplikasi data di dua tempat berbeda, serta lebih maintainable karena developer tidak perlu mengupdate daftar cuisine secara manual ketika ada perubahan data. Teknik yang digunakan melibatkan tiga tahap transformasi data: pertama menggunakan .map((r) => r.cuisine) untuk mentransformasi setiap objek Recipe menjadi String yang berisi nama cuisine-nya saja, kedua menggunakan .toSet() untuk menghilangkan duplikasi karena beberapa resep memiliki cuisine yang sama misalnya Italian muncul dua kali, dan ketiga menggunakan .toList() untuk mengkonversi Set kembali menjadi List agar bisa diiterasi di dalam ListView. Dari 6 resep dummy yang ada, terdapat cuisine Italian sebanyak 2 kali, Asian 1 kali, American 1 kali, Mexican 1 kali, dan Mediterranean 1 kali, sehingga setelah proses .toSet() akan menghasilkan 5 cuisine unik yang siap ditampilkan sebagai ChoiceChip.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/17.png" class="img-fluid" alt="Ambil daftar cuisine">
+                <figcaption>Gambar 17: Kode mengambil daftar cuisine secara dinamis</figcaption>
+              </figure>
+
+              <h6>c. Ubah body menjadi Column: deretan chip di dalam SizedBox(height: 56) berisi ListView horizontal, lalu Expanded berisi list atau grid.</h6>
+              <p>
+                Pada soal ketiga ini, kita diminta untuk mengubah struktur body Scaffold dari widget tunggal (list atau grid) menjadi Column yang terdiri dari dua bagian utama. Bagian pertama adalah SizedBox dengan tinggi tetap 56 pixel yang berisi deretan ChoiceChip dalam ListView horizontal, dimana SizedBox digunakan untuk membatasi tinggi area chip agar tidak memakan terlalu banyak ruang layar, dan ListView dibuat horizontal dengan property scrollDirection: Axis.horizontal sehingga user bisa scroll ke samping jika chip tidak muat di layar. ListView ini diberi padding horizontal 16 pixel dan vertical 8 pixel untuk memberi jarak dari tepi layar agar terlihat lebih rapi. Di dalam ListView terdapat dua jenis ChoiceChip: chip pertama adalah chip "Semua" dengan kondisi selected: _cuisine == null yang berarti chip ini akan terseleksi ketika tidak ada filter aktif, dan ketika user menekan chip ini maka callback onSelected akan mengeksekusi setState(() => _cuisine = null) untuk mereset filter. Chip-chip selanjutnya dibuat secara dinamis menggunakan spread operator ...cuisines.map() yang akan mengiterasi setiap cuisine dan membuat ChoiceChip dengan label sesuai nama cuisine tersebut, kondisi selected: _cuisine == cuisine untuk mengecek apakah chip tersebut sedang aktif, dan callback onSelected yang akan mengeksekusi setState(() => _cuisine = cuisine) untuk mengaktifkan filter sesuai cuisine yang dipilih. Setiap chip dibungkus dengan Padding untuk memberi jarak 8 pixel di sebelah kanan agar tidak menempel satu sama lain. Bagian kedua dari Column adalah widget Expanded yang berisi list atau grid resep yang sudah difilter, dimana Expanded berfungsi untuk mengisi seluruh sisa ruang layar yang tersedia setelah dikurangi tinggi SizedBox chip di atasnya, sehingga list atau grid bisa scroll secara vertikal dengan leluasa.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/18.png" class="img-fluid" alt="Column dengan chip">
+                <figcaption>Gambar 18: Struktur Column dengan ChoiceChip filter</figcaption>
+              </figure>
+
+              <h6>d. Kirim data yang sudah difilter ke _buildList() dan _buildGrid().</h6>
+              <p>
+                Pada soal keempat, diminta untuk melakukan filtering terhadap data resep berdasarkan pilihan cuisine yang aktif, kemudian mengirim data hasil filter tersebut sebagai parameter ke method _buildList() dan _buildGrid(). Proses filtering dilakukan dengan membuat variabel filteredRecipes yang menggunakan conditional expression: jika _cuisine == null maka filteredRecipes akan berisi seluruh dummyRecipes tanpa filter karena user memilih "Semua", namun jika _cuisine memiliki nilai tertentu maka akan digunakan method .where((r) => r.cuisine == _cuisine) untuk memfilter hanya resep yang memiliki cuisine sesuai pilihan, dan hasilnya dikonversi ke List menggunakan .toList(). Data yang sudah difilter ini kemudian dikirim ke method _buildList() atau _buildGrid() sesuai mode tampilan yang aktif. Untuk mengakomodasi hal ini, signature kedua method tersebut harus diubah dari yang sebelumnya tidak menerima parameter menjadi menerima parameter bertipe List&lt;Recipe&gt; recipes. Method _buildList() akan membuat ListView.builder dengan itemCount: recipes.length yang menggunakan panjang data yang dikirim bukan dummyRecipes.length, dan pada itemBuilder akan menggunakan recipes[index] untuk menampilkan data yang sudah difilter. Demikian juga dengan method _buildGrid() yang membuat GridView.builder dengan itemCount: recipes.length dan menampilkan recipes[index] pada setiap grid item. Pendekatan ini membuat kedua method menjadi lebih reusable karena bisa menerima data berbeda-beda, logic filtering terpusat di satu tempat yaitu di dalam method build() sehingga mudah untuk maintenance, dan pemisahan concern antara logic filtering dengan logic presentation menjadi lebih jelas.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/19.png" class="img-fluid" alt="Filtering data">
+                <figcaption>Gambar 19: Implementasi filtering dan passing data</figcaption>
+              </figure>
+
+              <h6>2. Latihan 2</h6>
+              <p>
+                Ubah halaman Favorit untuk menampilkan resep favorit dalam bentuk grid menggunakan widget GridView.builder.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/20.png" class="img-fluid" alt="Latihan 2 - Part 1">
+                <figcaption>Gambar 20: Halaman favorit dengan grid view</figcaption>
+              </figure>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/21.png" class="img-fluid" alt="Latihan 2 - Part 2">
+                <figcaption>Gambar 21: Implementasi GridView untuk favorit</figcaption>
+              </figure>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/22.png" class="img-fluid" alt="Latihan 2 - Part 3">
+                <figcaption>Gambar 22: Kode GridView.builder untuk favorit</figcaption>
+              </figure>
+
+              <p>
+                Pada tugas kedua ini, kita diminta untuk mengubah halaman Favorit yang sebelumnya menampilkan resep favorit dalam bentuk list menjadi bentuk grid menggunakan widget GridView.builder. Implementasinya mirip dengan yang ada pada halaman HomePage, dimana digunakan properti crossAxisCount: 2 untuk membuat dua kolom, serta properti lain seperti mainAxisSpacing, crossAxisSpacing, dan childAspectRatio untuk mengatur tampilan grid. Data resep favorit diambil dari FavoriteProvider menggunakan context.watch&lt;FavoriteProvider&gt;().favorites yang akan otomatis diupdate ketika ada perubahan status favorit.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/23.png" class="img-fluid" alt="Hasil latihan 2">
+                <figcaption>Gambar 23: Hasil akhir halaman favorit</figcaption>
+              </figure>
+
+              <h6>3. Latihan 3</h6>
+              <p>
+                Ubah halaman detail resep untuk menggunakan CustomScrollView dengan SliverAppBar yang menampilkan gambar resep sebagai header yang dapat collapse saat di-scroll.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/24.png" class="img-fluid" alt="Latihan 3 - Part 1">
+                <figcaption>Gambar 24: Halaman detail dengan SliverAppBar</figcaption>
+              </figure>
+
+              <p>
+                Pada tugas ketiga ini, kita diminta untuk mengubah halaman detail resep menggunakan CustomScrollView dengan SliverAppBar untuk menciptakan efek collapsing header. SliverAppBar memiliki properti flexibleSpace yang berisi FlexibleSpaceBar dengan background RecipeImage untuk menampilkan gambar resep dalam ukuran besar. Properti expandedHeight menentukan tinggi maksimal AppBar saat expanded, sedangkan floating dan pinned mengatur behavior saat scroll. Saat user scroll ke bawah, gambar akan collapse dengan smooth transition dari posisi di bawah foto saat expanded ke posisi normal AppBar saat collapsed, menciptakan transisi visual yang smooth dan natural. Styling title menggunakan TextStyle dengan color: Colors.white agar teks terlihat jelas di atas foto yang mungkin memiliki warna beragam, dan yang sangat penting adalah penambahan shadows dengan Shadow widget yang memiliki offset (0, 1), blurRadius 3.0, dan color black45, sehingga teks memiliki bayangan hitam semi-transparan yang membuat teks tetap terbaca dengan jelas bahkan jika background foto memiliki area yang terang atau kontras rendah.
+              </p>
+
+              <figure class="laprak-figure">
+                <img src="images/gambar praktikum 7/25.png" class="img-fluid" alt="Latihan 3 - Part 2">
+                <figcaption>Gambar 25: Implementasi CustomScrollView dengan SliverAppBar</figcaption>
+              </figure>
+            </section>
+
+            <!-- KESIMPULAN -->
+            <section>
+              <h5>Kesimpulan</h5>
+              <p>
+                Praktikum 7 ini berhasil menambahkan fitur-fitur penting pada aplikasi ResepKu yang meningkatkan user experience secara signifikan. Implementasi GridView memberikan alternatif tampilan yang lebih modern dan efisien dalam menampilkan banyak resep, sementara image loading dengan error handling memastikan aplikasi tetap stabil meskipun terjadi masalah koneksi atau URL gambar tidak valid.
+              </p>
+              <p>
+                Penerapan asset management untuk font custom (Poppins) dan logo memberikan identitas visual yang kuat pada aplikasi. Penggunaan cacheWidth pada image loading terbukti sangat efektif dalam menghemat memori hingga 98%, yang sangat penting untuk performa aplikasi mobile. Penambahan fitur filtering berdasarkan cuisine menggunakan state lokal menunjukkan pemahaman yang baik tentang kapan menggunakan state management lokal (setState) versus global (Provider).
+              </p>
+              <p>
+                Latihan-latihan yang diberikan membantu memperdalam pemahaman tentang ChoiceChip untuk filtering, penggunaan ListView horizontal, Expanded widget untuk layout responsif, serta CustomScrollView dengan SliverAppBar untuk menciptakan UI yang lebih engaging dan professional. Implementasi halaman favorit dengan grid view dan halaman detail dengan collapsing header menunjukkan kemampuan mengintegrasikan berbagai widget Flutter untuk membangun aplikasi yang lengkap dan polished.
+              </p>
+              <p>
+                Dari praktikum ini dapat dipahami bahwa Flutter menyediakan berbagai widget dan teknik optimasi yang powerful untuk membangun aplikasi mobile yang tidak hanya fungsional, tetapi juga responsif, efisien, dan memiliki user experience yang excellent. Kombinasi antara state management yang tepat, optimasi performa, dan desain UI yang baik menghasilkan aplikasi ResepKu yang siap dikembangkan lebih lanjut dengan fitur-fitur tambahan.
+              </p>
+            </section>
+
+          </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-light pt-5">
+    <div class="container pb-4 border-bottom border-secondary">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Tentang</h6>
+          <p class="small text-white-50 mb-0">
+            Fadil Web adalah layanan pembuatan website, aplikasi, dan solusi digital.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1"><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+            <li class="mb-1"><a href="about.html" class="text-decoration-none text-light">About</a></li>
+            <li class="mb-1"><a href="portfolio.html" class="text-decoration-none text-light">Portfolio</a></li>
+            <li class="mb-1"><a href="laprak.html" class="text-decoration-none text-light">Laprak</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-light">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center text-md-start">
+          <h6 class="fw-bold mb-3">Follow Me</h6>
+          <a href="https://wa.me/6282311488810" target="_blank" class="text-light fs-4 me-2 text-decoration-none">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="https://facebook.com/profile.php?id=100040110443069" target="_blank" class="text-light fs-4 me-2 text-decoration-none">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/fadilasril_20" target="_blank" class="text-light fs-4 text-decoration-none">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-3">
+      <p class="small mb-0">&copy; 2025 | Fadil Insanus Siddik</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
